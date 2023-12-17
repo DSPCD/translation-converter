@@ -1,0 +1,66 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>DSP Translation Converter</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="author" content="">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/base16/dracula.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <div class="info">
+    <span class="version-text">Dyson Sphere Program Translation Converter</span>
+  </div>
+  <div class="tabbedContent vertical">
+    <div class="tabsnav">
+      <ul class="tabs">
+        <li><a class="active">Compare</a></li>
+        <li><a>Headers.txt</a></li>
+        <li><a>About</a></li>
+      </ul>
+    </div>
+    <div class="tabscontent">
+      <section class="tab active" id="tab-1">
+        <div class="info">
+          <span>This tool will convert the json file downloaded from </span>
+          <a class="lightgreen" href="https://crowdin.com/project/dyson-sphere-program" target="blank">Crowdin</a>
+          <span>and convert them into the game files needed to run the game with a custom translation.</span>
+        </div>
+        <div class="info">
+          <label for="file-upload">Select the translation file (DysonSphereProgram_The_Dark_Fog.json):</label>
+          <input name="file-upload" type="file" id="FileInput" accept=".xliff, .xml, .json">
+          <button class="dsp-button" onclick="ConvertTranslations()">Convert</button>
+        </div>
+        <div class="info">Choose your language to update your Headers.txt and create your custom language folder:</div>
+        <div class="locale-selection">
+          <label for="locales">Language:</label>
+          <select name="locales" id="locale-selection" onchange="updateLocale(this)"></select>
+        </div>
+        <div class="locale-selection">
+          <label for="custom-locale">Custom language folder:</label>
+          <span class="warning">Any 4-digit number other than 2052 or 1033.</span>
+          <input name="custom-locale" id="locale-folder" value="1035" maxlength="4" onkeyup="updateLocaleFolder(this)"></input>
+          <button class="dsp-button" onclick="generateHeader()">Generate Header.txt file</button>
+        </div>
+        
+      </section>
+      <section class="tab" id="tab-2">
+        <div id="output"></div>
+      </section>
+      <section class="tab" id="tab-3">
+        <div class="info">Created by RogerHN</div>
+      </section>
+    </div>
+  </div>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+  <script src="./js/script.js"></script>
+</body>
+
+</html>
