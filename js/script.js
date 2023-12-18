@@ -63,6 +63,15 @@ let languageNumber = {
   "zh_TW": 1028
 }
 
+let translationFix = {
+  "base_ImageLogo0_5": "UI/Textures/dsp-logo-en",
+  "base_ImageLogo1_5": "UI/Textures/dsp-logo-flat-en",
+  "base_ImageLogo2_0": "UI/Textures/dsp-logo-flat-en",
+  "base_AudioResPostfix_5": "-en",
+  "base_ResPostfix_5": "-en",
+  "base_CutsceneBGM0_0": "Musics/df-cutscene-en",
+}
+
 
 const selectElement = document.getElementById("locale-selection");
 
@@ -89,7 +98,6 @@ function ConvertTranslations(){
 }
 
 function copy(element){
-  console.log()
   let text_to_copy = element.value;
   element.select();
 
@@ -181,7 +189,7 @@ prototype=-1
 dictionary=3
 [outsource]=-6
 [user]=-9
-`
+`;
 
   const utf16leContent = new TextEncoder("utf-16le").encode(fileContent);
   const blob = new Blob([utf16leContent], { type: "text/plain;charset=utf-16le" });
@@ -258,7 +266,13 @@ function createFilesFromJson(data){
         fileContent = "";
       }
 
-      fileContent += `${original}\t\t${num}\t${value}\r`;
+      if(translationFix[key]){
+        fileContent += `${original}\t\t${num}\t${translationFix[key]}\r`;
+      } else {
+        fileContent += `${original}\t\t${num}\t${value}\r`;
+      }
+
+      
     }
 
     if(props.length === 4){
@@ -271,7 +285,12 @@ function createFilesFromJson(data){
         filename = file;
       }
 
-      fileContent +=`${original}\t\t${questionMark}\t${num}\t${value}\r`;
+      if(translationFix[key]){
+        fileContent +=`${original}\t\t${questionMark}\t${num}\t${translationFix[key]}\r`;
+      } else {
+        fileContent +=`${original}\t\t${questionMark}\t${num}\t${value}\r`;
+      }
+      
     }
 
     if (index === keysArray.length - 1) {
