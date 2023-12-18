@@ -8,7 +8,7 @@ const locales = {
   "de": "German",
   "el": "Greek",
   "en": "English",
-  "es-ES": "Spanish",
+  "es_ES": "Spanish",
   "fi": "Finnish",
   "fr": "French",
   "he": "Hebrew",
@@ -19,18 +19,48 @@ const locales = {
   "nl": "Dutch",
   "no": "Norwegian",
   "pl": "Polish",
-  "pt-BR": "Portuguese, Brazilian",
-  "pt-PT": "Portuguese",
+  "pt_BR": "Portuguese, Brazilian",
+  "pt_PT": "Portuguese",
   "ro": "Romanian",
   "ru": "Russian",
   "sq": "Albanian",
   "sr": "Serbian (Cyrillic)",
-  "sv-SE": "Swedish",
+  "sv_SE": "Swedish",
   "tr": "Turkish",
   "uk": "Ukrainian",
   "vi": "Vietnamese",
-  "zh-CN": "Chinese Simplified",
-  "zh-TW": "Chinese Traditional"
+  "zh_CN": "Chinese Simplified",
+  "zh_TW": "Chinese Traditional"
+}
+
+let languageNumber = {
+  "af": 1078,
+  "ar": 14337,
+  "ca": 1027,
+  "cs": 1029,
+  "da": 1030,
+  "de": 1031,
+  "el": 1032,
+  "en": 2057,
+  "es_ES": 1034,
+  "fi": 1035,
+  "fr": 1036,
+  "he": 1037,
+  "hu": 1038,
+  "it": 1040,
+  "ja": 1041,
+  "ko": 1042,
+  "nl": 1043,
+  "no": 1044,
+  "pl": 1045,
+  "pt_BR": 1046,
+  "pt_PT": 2070,
+  "ru": 1049,
+  "sl": 1060,
+  "sv_SE": 1053,
+  "tr": 1055,
+  "zh_CN": 2052,
+  "zh_TW": 1028
 }
 
 
@@ -47,7 +77,7 @@ for (const key in locales) {
 }
 
 let LOCALE = 'en';
-let LOCALEFOLDER = "1035"
+let LOCALEFOLDER = 2057;
 
 function ConvertTranslations(){
   let input = document.getElementById('FileInput');
@@ -59,20 +89,13 @@ function ConvertTranslations(){
 }
 
 function updateLocale(select){
-  console.log(select)
   LOCALE = select.value;
-  console.log(LOCALE)
-  output();
-}
-
-function updateLocaleFolder(input){
-  console.log(input.value)
-  if(input.value !== "2052" && input.value !== "1033" && input.value.length > 3){
-    LOCALEFOLDER = input.value;
-    console.log(LOCALEFOLDER)
-    output();
+  if(languageNumber[LOCALE]){
+    LOCALEFOLDER = languageNumber[LOCALE]
+  } else {
+    console.error("Error... Invalid language numeric code!")
   }
-  
+  output();
 }
 
 function output(){
@@ -146,7 +169,6 @@ dictionary=3
 }
 
 function handleFileSelect(input) {
-  console.log(input.files)
   let File = input.files[0];
   let fileName = input.files[0].name;
   if (File) {
@@ -173,7 +195,7 @@ function handleFileSelect(input) {
 
 function createFilesFromXliff(data){
   data.forEach(function(item){
-    console.log()
+    //console.log()
   })
 }
 
