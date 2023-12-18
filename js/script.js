@@ -141,31 +141,23 @@ function output(){
   }
 
   let content = `<div class="block">
-  <div class="message">Place the downloaded files (base.txt, dictionary.txt and prototype.txt) inside your custom language folder (Create one if it doesn't exists) in \\steamapps\\common\\Dyson Sphere Program\\Locale, and update your Header.txt with the code below.</div>
+  <div class="info">Copy the code below and paste in the file: Header.txt in the Locale folder under \\steamapps\\common\\Dyson Sphere Program\\Locale</div>
+<textarea class="code" onclick=copy(this) readonly>
+[Localization Project]
+Version=1.1
+2052,简体中文,zhCN,zh,1033,1
+1033,English,enUS,en,2052,0
+${LOCALEFOLDER},${locales[LOCALE]},${LOCALE.replace(/_/g,"")},${LOCALE},${LOCALEFOLDER},${latin}
 
-  <div class="message">Copy the highlighted code below and paste in the file: Header.txt in the Locale folder under \\steamapps\\common\\Dyson Sphere Program\\Locale</div>
-  <div class="code">
-  [Localization Project]
-  Version=1.1
-  2052,简体中文,zhCN,zh,1033,1
-  1033,English,enUS,en,2052,0
-  1035,Portuguese,ptBR,pt-BR,1033,0
-
-  base=0
-  combat=0
-  prototype=-1
-  dictionary=3
-  [outsource]=-6
-  [user]=-9
-  ${LOCALEFOLDER},${locales[LOCALE]},${LOCALE.replace(/_/g,"")},${LOCALE},${LOCALEFOLDER},${latin}
-  base=0
-  combat=0
-  prototype=-1
-  dictionary=3
-  [outsource]=-6
-  [user]=-9
-  </div>
+base=0
+combat=0
+prototype=-1
+dictionary=3
+[outsource]=-6
+[user]=-9
+</textarea>
   </div>`
+  outputDiv.innerHTML = "";
   outputDiv.innerHTML = content;
   
 }
@@ -199,7 +191,7 @@ dictionary=3
   document.body.appendChild(downloadLink);
   downloadLink.click();
   document.body.removeChild(downloadLink);
-
+  output()
 }
 
 function handleFileSelect(input) {

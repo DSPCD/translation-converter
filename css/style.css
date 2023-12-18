@@ -136,6 +136,14 @@ body {
   text-decoration: none;
 }
 
+textarea.code {
+  min-width: 240px;
+  min-height: 200px;
+  padding: 0.25rem;
+  resize: none;
+  overflow-y: hidden;
+}
+
 .locale-selection {
   display: flex;
   align-items: center;
