@@ -88,10 +88,36 @@ function ConvertTranslations(){
   }
 }
 
+function copy(element){
+  console.log()
+  let text_to_copy = element.value;
+  element.select();
+
+  if (!navigator.clipboard){
+      // use old commandExec() way
+      let $temp = $("<input>");
+      $("body").append($temp);
+      $temp.val($(element).text()).select();
+      document.execCommand("copy");
+      $temp.remove();
+  } else{
+      navigator.clipboard.writeText(text_to_copy).then(
+        function(){
+          console.log("text copied!"); // success 
+        })
+      .catch(
+        function() {
+        console.log("error copying text"); // error
+      });
+  }
+}
+
 function updateLocale(select){
   LOCALE = select.value;
   if(languageNumber[LOCALE]){
-    LOCALEFOLDER = languageNumber[LOCALE]
+    LOCALEFOLDER = languageNumber[LOCALE];
+    let localeNumber = document.getElementById('locale-folder');
+    localeNumber.value = LOCALEFOLDER;
   } else {
     console.error("Error... Invalid language numeric code!")
   }
@@ -123,7 +149,7 @@ function output(){
   dictionary=3
   [outsource]=-6
   [user]=-9
-  ${LOCALEFOLDER},${locales[LOCALE]},${LOCALE.replace(/-/g,"")},${LOCALE},${LOCALEFOLDER},${latin}
+  ${LOCALEFOLDER},${locales[LOCALE]},${LOCALE.replace(/_/g,"")},${LOCALE},${LOCALEFOLDER},${latin}
   base=0
   combat=0
   prototype=-1

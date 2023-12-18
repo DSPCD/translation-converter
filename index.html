@@ -42,6 +42,8 @@
           <select name="locales" id="locale-selection" onchange="updateLocale(this)"></select>
         </div>
         <div class="locale-selection">
+          <label for="custom-locale">Language folder number (click to copy):</label>
+          <input name="custom-locale" id="locale-folder" value="2057" readonly onclick="copy(this)"></input>
           <button class="dsp-button" onclick="generateHeader()">Generate Header.txt file</button>
         </div>
         
