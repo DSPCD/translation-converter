@@ -278,9 +278,9 @@ function createFilesFromJson(data){
       }
 
       if(translationFix[key]){
-        fileContent +=`${original}\t\t${questionMark}\t${num}\t${translationFix[key]}\r`;
+        fileContent +=`${original}\t${questionMark}\t${num}\t${translationFix[key]}\r`;
       } else {
-        fileContent +=`${original}\t\t${questionMark}\t${num}\t${value}\r`;
+        fileContent +=`${original}\t${questionMark}\t${num}\t${value}\r`;
       }
       
     }
