@@ -147,7 +147,7 @@ function output(){
 Version=1.1
 2052,简体中文,zhCN,zh,1033,1
 1033,English,enUS,en,2052,0
-${LOCALEFOLDER},${locales[LOCALE]},${LOCALE.replace(/_/g,"")},${LOCALE},${LOCALEFOLDER},${latin}
+${LOCALEFOLDER},${locales[LOCALE]},${LOCALE.replace(/_/g,"")},${LOCALE},1033,${latin}
 
 base=0
 combat=0
