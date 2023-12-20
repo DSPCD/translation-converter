@@ -244,18 +244,9 @@ function createFilesFromJson(data){
   const keysArray = Object.keys(data);
 
   Object.keys(data).forEach(function(key,index){
-    let value = data[key]
-    .replace(/\n/g, "\\\\n")
-    .replace(/\r/g, "\\\\r")
-    .replace(/(^|[^\\])\\n/g, '$1\\\\n')
-    .replace(/(^|[^\\])\\r/g, '$1\\\\r')
+    let value = data[key].replace(/\n/g, "\\n").replace(/\r/g, "\\r")
     
     let props = key.split("_")
-
-    if(key === "base_复制建筑_2"){
-      console.log(value)
-    }
-
 
     if(props.length === 3){
       let [file, original, num] = props;
@@ -273,11 +264,6 @@ function createFilesFromJson(data){
       } else {
         fileContent += `${original}\t\t${num}\t${value}\r`;
       }
-
-      if(key === "base_复制建筑_2"){
-        console.log(`${original}\t\t${num}\t${value}\r`)
-      }
-
       
     }
 
