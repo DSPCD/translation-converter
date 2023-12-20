@@ -1,3 +1,5 @@
+const VERSION = "0.10.28.21011";
+
 const locales = {
   "en": "English",
   "af": "Afrikaans",
@@ -173,7 +175,7 @@ function generateHeader(){
 Version=1.1
 2052,简体中文,zhCN,zh,1033,1
 1033,English,enUS,en,2052,0
-${LOCALEFOLDER},${locales[LOCALE]},${LOCALE.replace(/-/g,"")},${LOCALE},${LOCALEFOLDER},${latin}
+${LOCALEFOLDER},${locales[LOCALE]},${LOCALE.replace(/-/g,"")},${LOCALE},1033,${latin}
 
 base=0
 combat=0
@@ -262,7 +264,11 @@ function createFilesFromJson(data){
       if(translationFix[key]){
         fileContent += `${original}\t\t${num}\t${translationFix[key]}\r`;
       } else {
-        fileContent += `${original}\t\t${num}\t${value}\r`;
+        if(key === "base_需要重启完全生效_3"){
+          fileContent += `${original}\t\t${num}\t${value} v.${VERSION}\r`;
+        } else{
+          fileContent += `${original}\t\t${num}\t${value}\r`;
+        }
       }
       
     }
