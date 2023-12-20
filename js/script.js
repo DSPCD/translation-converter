@@ -262,7 +262,7 @@ function createFilesFromJson(data){
       }
 
       if(translationFix[key]){
-        fileContent += `${original}\t\t${num}\t${translationFix[key]}\r`;
+        fileContent += `${original}\t\t${num}\t${translationFix[key]}\n`;
       } else {
         if(key === "base_需要重启完全生效_3"){
           fileContent += `${original}\t\t${num}\t${value} v.${VERSION}\r`;
@@ -284,12 +284,14 @@ function createFilesFromJson(data){
       }
 
       if(translationFix[key]){
-        fileContent +=`${original}\t${questionMark}\t${num}\t${translationFix[key]}\r`;
+        fileContent +=`${original}\t${questionMark}\t${num}\t${translationFix[key]}\n`;
       } else {
         fileContent +=`${original}\t${questionMark}\t${num}\t${value}\r`;
       }
       
     }
+
+    
 
     if (index === keysArray.length - 1) {
       closeResetFile(fileContent,filename)
