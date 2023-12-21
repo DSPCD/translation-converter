@@ -21,7 +21,7 @@ const locales = {
   "nl": "Dutch",
   "no": "Norwegian",
   "pl": "Polish",
-  "pt_BR": "Portuguese, Brazilian",
+  "pt_BR": "Portuguese Brazilian",
   "pt_PT": "Portuguese",
   "ro": "Romanian",
   "ru": "Russian",
