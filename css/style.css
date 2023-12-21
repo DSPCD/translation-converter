@@ -137,11 +137,12 @@ body {
 }
 
 textarea.code {
-  min-width: 240px;
-  min-height: 200px;
+  min-width: 100%;
+  min-height: 220px;
   padding: 0.25rem;
   resize: none;
   overflow-y: hidden;
+  background-color: #c1c5c7;
 }
 
 .locale-selection {
