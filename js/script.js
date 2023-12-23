@@ -1,71 +1,50 @@
 const VERSION = "0.10.28.21011";
 
-const locales = {
-  "en": "English",
-  "af": "Afrikaans",
-  "ar": "Arabic",
-  "ca": "Catalan",
-  "cs": "Czech",
-  "da": "Danish",
-  "de": "German",
-  "el": "Greek",
-  "en": "English",
-  "es_ES": "Spanish",
-  "fi": "Finnish",
-  "fr": "French",
-  "he": "Hebrew",
-  "hu": "Hungarian",
-  "it": "Italian",
-  "ja": "Japanese",
-  "ko": "Korean",
-  "nl": "Dutch",
-  "no": "Norwegian",
-  "pl": "Polish",
-  "pt_BR": "Portuguese Brazilian",
-  "pt_PT": "Portuguese",
-  "ro": "Romanian",
-  "ru": "Russian",
-  "sq": "Albanian",
-  "sr": "Serbian (Cyrillic)",
-  "sv_SE": "Swedish",
-  "tr": "Turkish",
-  "uk": "Ukrainian",
-  "vi": "Vietnamese",
-  "zh_CN": "Chinese Simplified",
-  "zh_TW": "Chinese Traditional"
+const CROWDIN_URL = "https://crowdin.com/backend/download/project/dyson-sphere-program/";
+
+class Locale {
+  constructor(name, folder, latin) {
+    this.name = name;
+    this.folder = folder;
+    this.latin = latin;
+  }
 }
 
-let languageNumber = {
-  "af": 1078,
-  "ar": 14337,
-  "ca": 1027,
-  "cs": 1029,
-  "da": 1030,
-  "de": 1031,
-  "el": 1032,
-  "en": 2057,
-  "es_ES": 1034,
-  "fi": 1035,
-  "fr": 1036,
-  "he": 1037,
-  "hu": 1038,
-  "it": 1040,
-  "ja": 1041,
-  "ko": 1042,
-  "nl": 1043,
-  "no": 1044,
-  "pl": 1045,
-  "pt_BR": 1046,
-  "pt_PT": 2070,
-  "ru": 1049,
-  "sl": 1060,
-  "sv_SE": 1053,
-  "tr": 1055,
-  "zh_CN": 2052,
-  "zh_TW": 1028
-}
+const LOCALES = new Map();
 
-let translationFix = {
+LOCALES.set("af", new Locale("Afrikaans", 1078, 0));
+LOCALES.set("ar", new Locale("Arabic", 14337, 0));
+LOCALES.set("ca", new Locale("Catalan", 1027, 0));
+LOCALES.set("cs", new Locale("Czech", 1029, 0));
+LOCALES.set("da", new Locale("Danish", 1030, 0));
+LOCALES.set("de", new Locale("German", 1031, 0));
+LOCALES.set("el", new Locale("Greek", 1032, 0));
+LOCALES.set("en", new Locale("English", 2057, 0));
+LOCALES.set("es_ES", new Locale("Spanish", 1034, 0));
+LOCALES.set("fi", new Locale("Finnish", 1035, 0));
+LOCALES.set("fr", new Locale("French", 1036, 0));
+LOCALES.set("he", new Locale("Hebrew", 1037, 0));
+LOCALES.set("hu", new Locale("Hungarian", 1038, 0));
+LOCALES.set("it", new Locale("Italian", 1040, 0));
+LOCALES.set("ja", new Locale("Japanese", 1041, 1));
+LOCALES.set("ko", new Locale("Korean", 1042, 1));
+LOCALES.set("nl", new Locale("Dutch", 1043, 0));
+LOCALES.set("no", new Locale("Norwegian", 1044, 0));
+LOCALES.set("pl", new Locale("Polish", 1045, 0));
+LOCALES.set("pt_BR", new Locale("Portuguese Brazilian", 1046, 0));
+LOCALES.set("pt_PT", new Locale("Portuguese", 2070, 0));
+LOCALES.set("ro", new Locale("Romanian", 1048, 0));
+LOCALES.set("ru", new Locale("Russian", 1049, 0));
+LOCALES.set("sq", new Locale("Albanian", 1052, 0));
+LOCALES.set("sr", new Locale("Serbian (Cyrillic)", 3098, 0));
+LOCALES.set("sv_SE", new Locale("Swedish", 1053, 0));
+LOCALES.set("tr", new Locale("Turkish", 1055, 0));
+LOCALES.set("uk", new Locale("Ukrainian", 1058, 0));
+LOCALES.set("vi", new Locale("Vietnamese", 1066, 0));
+LOCALES.set("zh_CN", new Locale("Chinese Simplified", 2052, 0));
+LOCALES.set("zh_TW", new Locale("Chinese Traditional", 1028, 0));
+
+const TRANSLATION_FIX = {
   "base_ImageLogo0_5": "UI/Textures/dsp-logo-en",
   "base_ImageLogo1_5": "UI/Textures/dsp-logo-flat-en",
   "base_ImageLogo2_0": "UI/Textures/dsp-logo-flat-en",
@@ -74,109 +53,77 @@ let translationFix = {
   "base_CutsceneBGM0_0": "Musics/df-cutscene-en",
 }
 
+let SELECTED_LOCALE = 'en';
 
-const selectElement = document.getElementById("locale-selection");
-
-// Loop through the locales object and create an option element for each entry
-for (const key in locales) {
-  if (locales.hasOwnProperty(key)) {
+// populate the drop-down list
+function initLocales() {
+  let selectElement = document.getElementById("locale-selection");
+  LOCALES.forEach(function (value, key) {
     const optionElement = document.createElement("option");
     optionElement.value = key;
-    optionElement.textContent = locales[key];
+    optionElement.textContent = value.name;
+    if (key == SELECTED_LOCALE) {
+      optionElement.selected = true;
+    }
     selectElement.appendChild(optionElement);
-  }
+  });
 }
 
-let LOCALE = 'en';
-let LOCALEFOLDER = 2057;
-
-function ConvertTranslations(){
-  let input = document.getElementById('FileInput');
-  let File = input.files[0];
-  if (File) {
-    let fileName = input.files[0].name;
-    handleFileSelect(input)
-  }
+function updateLocale(select) {
+  SELECTED_LOCALE = select.value;
 }
 
-function copy(element){
-  let text_to_copy = element.value;
-  element.select();
+async function downloadTranslation() {
+  // initialize zip
+  let translationZip = new JSZip();
 
-  if (!navigator.clipboard){
-      // use old commandExec() way
-      let $temp = $("<input>");
-      $("body").append($temp);
-      $temp.val($(element).text()).select();
-      document.execCommand("copy");
-      $temp.remove();
-  } else{
-      navigator.clipboard.writeText(text_to_copy).then(
-        function(){
-          console.log("text copied!"); // success 
-        })
-      .catch(
-        function() {
-        console.log("error copying text"); // error
+  // get json file directly from crowdin project -- NOT WORKING YET
+  //let crowdinZip = await downloadCrowdinZip();
+
+  // generate header.txt file and add to the zip
+  translationZip.file("Header.txt", generateHeader());
+
+  // create language folder in zip for translation txt files
+  let translationsFolder = translationZip.folder(LOCALES.get(SELECTED_LOCALE).folder);
+  // convert json to a map containing a blob for each file
+  // then add each file in the language folder
+  convertTranslations().then(function (translationFiles) {
+    translationFiles.forEach(function (value, key) {
+      translationsFolder.file(key.concat(".txt"), value);
+    });
+    // generate and download zip
+    translationZip
+      .generateAsync({ type: "blob" }).then(function (content) {
+        saveAs(content, "translation.zip");
       });
+  });
+}
+
+async function downloadCrowdinZip() {
+  let translationUrl = CROWDIN_URL.concat(SELECTED_LOCALE.replace("_", "-")).concat(".zip");
+  try {
+    const response = await fetch(translationUrl, {
+      mode: "no-cors",
+      headers: {
+        "Content-Type": "application/zip"
+      }
+    });
+    const crowdinZip = await response.blob();
+    return crowdinZip;
+  } catch (error) {
+    console.error(`Download error: ${error.message}`);
   }
 }
 
-function updateLocale(select){
-  LOCALE = select.value;
-  if(languageNumber[LOCALE]){
-    LOCALEFOLDER = languageNumber[LOCALE];
-    let localeNumber = document.getElementById('locale-folder');
-    localeNumber.value = LOCALEFOLDER;
-  } else {
-    console.error("Error... Invalid language numeric code!")
-  }
-  output();
-}
+function generateHeader() {
+  let localeProps = LOCALES.get(SELECTED_LOCALE);
 
-function output(){
-  let outputDiv = document.getElementById('output');
-  let latin = 0;
-
-  if(LOCALE === "jp" || LOCALE === "ko"){
-    latin = 1;
-  }
-
-  let content = `<div class="block">
-  <div class="info">Copy the code below and paste in the file: Header.txt in the Locale folder under \\steamapps\\common\\Dyson Sphere Program\\Locale</div>
-<textarea class="code" onclick=copy(this) readonly>
-[Localization Project]
+  let headerHeader = `[Localization Project]
 Version=1.1
 2052,简体中文,zhCN,zh,1033,1
-1033,English,enUS,en,2052,0
-${LOCALEFOLDER},${locales[LOCALE]},${LOCALE.replace(/_/g,"")},${LOCALE},1033,${latin}
+1033,English,enUS,en,2052,0`
 
-base=0
-combat=0
-prototype=-1
-dictionary=3
-[outsource]=-6
-[user]=-9
-</textarea>
-  </div>`
-  outputDiv.innerHTML = "";
-  outputDiv.innerHTML = content;
-  
-}
-
-function generateHeader(){
-  let latin = 0;
-
-  if(LOCALE === "jp" || LOCALE === "ko"){
-    latin = 1;
-  }
-
-  let fileContent = `[Localization Project]
-Version=1.1
-2052,简体中文,zhCN,zh,1033,1
-1033,English,enUS,en,2052,0
-${LOCALEFOLDER},${locales[LOCALE]},${LOCALE.replace(/-/g,"")},${LOCALE},1033,${latin}
-
+  let headerFooter = `
 base=0
 combat=0
 prototype=-1
@@ -185,129 +132,98 @@ dictionary=3
 [user]=-9
 `;
 
-  const utf16leContent = new TextEncoder("utf-16le").encode(fileContent);
-  const blob = new Blob([utf16leContent], { type: "text/plain;charset=utf-16le" });
-  const downloadLink = document.createElement('a');
-  downloadLink.href = URL.createObjectURL(blob);
-  downloadLink.download = 'Header.txt';
-  document.body.appendChild(downloadLink);
-  downloadLink.click();
-  document.body.removeChild(downloadLink);
-  output()
+  let headerLocaleElements = [localeProps.folder,
+  localeProps.name,
+  SELECTED_LOCALE.replace(/_/g, ""),
+    SELECTED_LOCALE,
+    "1033",
+  localeProps.latin];
+  let headerBody = headerLocaleElements.join(",");
+
+  let headerElements = [headerHeader, headerBody, headerFooter];
+
+  return headerElements.join("\n");
 }
 
-function handleFileSelect(input) {
-  let File = input.files[0];
-  let fileName = input.files[0].name;
-  if (File) {
+async function convertTranslations() {
+  return new Promise((resolve, reject) => {
+    const input = document.getElementById("FileInput");
+    const file = input.files[0];
     const reader = new FileReader();
-    reader.onload = function (e) {
-      if (fileName.toLowerCase().endsWith('.json')) {
-        try {
-          const jsonString = e.target.result;
-          const jsonData = JSON.parse(jsonString);
-          createFilesFromJson(jsonData)
-        } catch (error) {
-          console.error('Error parsing JSON:', error);
-        }
-      } else if (fileName.toLowerCase().endsWith('.xliff')) {
-        let x2js = new X2JS();
-        let json = x2js.xml_str2json(e.target.result);
-        // createTranslation(json.xliff.file.body["trans-unit"])
-      }
+
+    if (!file) {
+      reject(new Error("No file selected"));
+      return;
+    }
+
+    if (!file.name.toLowerCase().endsWith('.json')) {
+      reject(new Error("Wrong file type (expected json)"));
+      return;
+    }
+
+    reader.onload = function () {
+      const jsonString = reader.result;
+      const jsonData = JSON.parse(jsonString);
+      resolve(createFilesFromJson(jsonData));
     };
-    reader.readAsText(File);
-  }
-}
-//createTranslationFiles()
 
-function createFilesFromXliff(data){
-  data.forEach(function(item){
-    //console.log()
-  })
+    reader.onerror = function () {
+      reject(new Error("Error reading file"));
+    };
+
+    reader.readAsText(file);
+  });
 }
 
-function createFilesFromJson(data){
+function createFilesFromJson(data) {
   let filename = null;
   let fileContent = "";
-  let closeFile = false;
+  let translationFiles = new Map();
 
-  function closeResetFile(fileContent,name){
+  function closeResetFile(newFilename) {
     const utf16leContent = new TextEncoder("utf-16le").encode(fileContent);
     const blob = new Blob([utf16leContent], { type: "text/plain;charset=utf-16le" });
-    const downloadLink = document.createElement('a');
-    downloadLink.href = URL.createObjectURL(blob);
-    downloadLink.download = name + '.txt';
-    document.body.appendChild(downloadLink);
-    downloadLink.click();
-    document.body.removeChild(downloadLink);
+    translationFiles.set(filename, blob);
+    filename = newFilename;
+    fileContent = "";
   }
 
   const keysArray = Object.keys(data);
 
-  Object.keys(data).forEach(function(key,index){
-    let value = data[key].replace(/\n/g, "\\n").replace(/\r/g, "\\r")
-    
-    let props = key.split("_")
+  Object.keys(data).forEach(function (key) {
+    let file, original, questionMark, num;
 
-    if(props.length === 3){
-      let [file, original, num] = props;
-      if(filename === null){
-        filename = file
-      }
-      if(file !== filename){
-        closeResetFile(fileContent,filename)
-        filename = file;
-        fileContent = "";
-      }
+    let value = data[key].replace(/\n/g, "\\n").replace(/\r/g, "\\r");
 
-      if(translationFix[key]){
-        fileContent += `${original}\t\t${num}\t${translationFix[key]}\n`;
+    let props = key.split("_");
+
+    if (props.length === 3) {
+      [file, original, num] = props;
+      questionMark = "";
+    }
+    else if (props.length === 4) {
+      [file, original, questionMark, num] = props;
+    }
+
+    if (filename === null) {
+      filename = file;
+    }
+    else if (file !== filename) {
+      closeResetFile(file);
+    }
+
+    if (TRANSLATION_FIX[key]) {
+      fileContent += `${original}\t${questionMark}\t${num}\t${TRANSLATION_FIX[key]}\n`;
+    } else {
+      if (key === "base_需要重启完全生效_3") {
+        fileContent += `${original}\t${questionMark}\t${num}\t${value} v.${VERSION}\r`;
       } else {
-        if(key === "base_需要重启完全生效_3"){
-          fileContent += `${original}\t\t${num}\t${value} v.${VERSION}\r`;
-        } else{
-          fileContent += `${original}\t\t${num}\t${value}\r`;
-        }
+        fileContent += `${original}\t${questionMark}\t${num}\t${value}\r`;
       }
-      
     }
-
-    if(props.length === 4){
-      let [file, original, questionMark, num] = props;
-      if(filename === null){
-        filename = file
-      }
-      if(file !== filename){
-        closeResetFile(fileContent,filename)
-        filename = file;
-      }
-
-      if(translationFix[key]){
-        fileContent +=`${original}\t${questionMark}\t${num}\t${translationFix[key]}\n`;
-      } else {
-        fileContent +=`${original}\t${questionMark}\t${num}\t${value}\r`;
-      }
-      
-    }
-
-    
-
-    if (index === keysArray.length - 1) {
-      closeResetFile(fileContent,filename)
-    }
-
   })
+
+  closeResetFile(filename);
+
+  return translationFiles;
 }
-
-
-$('.tabsnav ul li').click(function(){
-  let currentTabIndex = $(this).index();
-  let tabsContainer = $(this).closest('.tabbedContent');
-  let tabsNav = $(tabsContainer).children('.tabsnav').children('ul').children('li');
-  let tabsContent = $(tabsContainer).children('.tabscontent').children('.tab'); 
-  $(tabsNav).removeClass('active');
-  $(this).addClass('active');
-  $(tabsContent).removeClass('active');
-  $(tabsContent).eq(currentTabIndex).addClass('active');
-});
