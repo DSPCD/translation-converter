@@ -116,6 +116,31 @@ body {
   color: white;
 }
 
+.info button.github{
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  color: #24292f;
+  background-color: #ebf0f4;
+  border-color: #ccd1d5;
+  border-color: rgba(31,35,40,.15);
+  background-image: -moz-linear-gradient(top, #f6f8fa, #ebf0f4 90%);
+  background-image: -moz-linear-gradient(top, #f6f8fa, #ebf0f4 90%);
+  background-image: linear-gradient(180deg, #f6f8fa, #ebf0f4 90%);
+  text-decoration: none;
+  height: 22px;
+  font-family: 'Roboto';
+  border-radius: 3px;
+  border-width: 1px;
+  cursor: pointer;
+}
+.info button.github:hover {
+  background-image: linear-gradient(180deg, #e3e7e7, #d6d9db 90%);
+}
+.info button svg {
+  width: 18px;
+}
 .file-upload {
   display: flex;
   flex-direction: column;
