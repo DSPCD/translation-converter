@@ -1,6 +1,6 @@
 ## License
 
-This project is dual-licensed under CC BY-NC-SA 4.0 and DSCPTC NCL
+This project is dual-licensed under CC BY-NC-SA 4.0 and DSPTC NCL
 
 Dyson Sphere Program Translation Converter Noncommercial License
 

@@ -18,4 +18,4 @@ Further instructions in the channel how-to-install in our [Discord](https://disc
 
 ## License
 
-This project is dual-licensed under CC BY-NC-SA 4.0 and DSCPTC NCL License - see the LICENSE.md file for details
+This project is dual-licensed under CC BY-NC-SA 4.0 and DSPTC NCL License - see the LICENSE.md file for details
