@@ -13,36 +13,36 @@ class Locale {
 const LOCALES = new Map();
 
 LOCALES.set("af", new Locale("Afrikaans", 1078, 0));
+LOCALES.set("sq", new Locale("Albanian", 1052, 0));
 LOCALES.set("ar", new Locale("Arabic", 14337, 0));
 LOCALES.set("ca", new Locale("Catalan", 1027, 0));
+LOCALES.set("zh_CN", new Locale("Chinese Simplified", 2052, 1));
+LOCALES.set("zh_TW", new Locale("Chinese Traditional", 1028, 1));
 LOCALES.set("cs", new Locale("Czech", 1029, 0));
 LOCALES.set("da", new Locale("Danish", 1030, 0));
-LOCALES.set("de", new Locale("German", 1031, 0));
-LOCALES.set("el", new Locale("Greek", 1032, 0));
+LOCALES.set("nl", new Locale("Dutch", 1043, 0));
 LOCALES.set("en", new Locale("English", 2057, 0));
-LOCALES.set("es_ES", new Locale("Spanish", 1034, 0));
 LOCALES.set("fi", new Locale("Finnish", 1035, 0));
 LOCALES.set("fr", new Locale("French", 1036, 0));
+LOCALES.set("de", new Locale("German", 1031, 0));
+LOCALES.set("el", new Locale("Greek", 1032, 0));
 LOCALES.set("he", new Locale("Hebrew", 1037, 0));
 LOCALES.set("hu", new Locale("Hungarian", 1038, 0));
 LOCALES.set("it", new Locale("Italian", 1040, 0));
 LOCALES.set("ja", new Locale("Japanese", 1041, 1));
 LOCALES.set("ko", new Locale("Korean", 1042, 1));
-LOCALES.set("nl", new Locale("Dutch", 1043, 0));
 LOCALES.set("no", new Locale("Norwegian", 1044, 0));
 LOCALES.set("pl", new Locale("Polish", 1045, 0));
 LOCALES.set("pt_BR", new Locale("Portuguese Brazilian", 1046, 0));
 LOCALES.set("pt_PT", new Locale("Portuguese", 2070, 0));
 LOCALES.set("ro", new Locale("Romanian", 1048, 0));
 LOCALES.set("ru", new Locale("Russian", 1049, 0));
-LOCALES.set("sq", new Locale("Albanian", 1052, 0));
 LOCALES.set("sr", new Locale("Serbian (Cyrillic)", 3098, 0));
+LOCALES.set("es_ES", new Locale("Spanish", 1034, 0));
 LOCALES.set("sv_SE", new Locale("Swedish", 1053, 0));
 LOCALES.set("tr", new Locale("Turkish", 1055, 0));
 LOCALES.set("uk", new Locale("Ukrainian", 1058, 0));
 LOCALES.set("vi", new Locale("Vietnamese", 1066, 0));
-LOCALES.set("zh_CN", new Locale("Chinese Simplified", 2052, 0));
-LOCALES.set("zh_TW", new Locale("Chinese Traditional", 1028, 0));
 
 const TRANSLATION_FIX = {
   "base_ImageLogo0_5": "UI/Textures/dsp-logo-en",

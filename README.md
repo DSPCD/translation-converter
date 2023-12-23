@@ -10,7 +10,11 @@ Further instructions in the channel how-to-install in our [Discord](https://disc
 
 ## Author
 
-RogerHN
+[RogerHN](https://github.com/rogerhnn)
+
+## Contributors
+
+[seigneurao](https://github.com/seigneurao)
 
 ## License
 
