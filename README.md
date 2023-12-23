@@ -2,6 +2,7 @@
 
 Use it to convert downloaded language files from [Crowdin](https://crowdin.com/project/dyson-sphere-program).
 (Rise of the Dark Fog update only)
+
 [Translation Converter](https://dspcd.github.io/translation-converter/)
 
 ## Description
