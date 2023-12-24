@@ -107,7 +107,7 @@ body {
   align-items: center;
   background: rgba(38, 50, 56, 0.4);
   margin: 1px 0;
-  padding: 10px 15px;
+  padding: 0.5rem 1rem;
   font-size: 16px;
   color: white;
   gap: 0.5rem;
@@ -163,6 +163,9 @@ body {
 #FileInput {
   font-family: "Saira", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1em;
+  width: 100%;
+  background-color: #080808;
+  border-radius: 3px;
 }
 
 .locale-selection {
@@ -220,6 +223,84 @@ body {
   gap: 0.5rem;
   width: 100%;
   box-sizing: border-box;
+}
+
+#error-strings {
+  background: rgba(38, 50, 56, 0.4);
+}
+
+.translation-error {
+  display: flex;
+  align-items: center;
+  background: #c50000;
+  margin: 1px 0;
+  padding: 0.5rem 1.5rem;
+  font-size: 16px;
+  color: white;
+  font-weight: 500;
+  gap: 0.5rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.string-with-error {
+  display: flex;
+  flex-direction: column;
+  padding: 0.25rem 1rem;
+  background-color: rgb(17, 23, 26);
+  margin-bottom: 2px;
+}
+
+.string-with-error input.text {
+  background-color: #e5e5e5;
+  border: none;
+  border-radius: 3px;
+  display: flex;
+  line-height: 18px;
+  width: 100%;
+  color: #000;
+}
+
+.string-with-error .missing {
+  display: flex;
+  gap: 0.25rem;
+  padding: 0.25rem;
+}
+.string-with-error .variable-missing {
+  padding: 0 0.5rem;
+  background-color: orangered;
+  line-height: 20px;
+  border-radius: 3px;
+}
+
+.string-with-error .source {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.25rem;
+}
+
+.string-with-error .source .translation-text {
+  padding: 0 0.5rem;
+  border-radius: 3px;
+  background-color: rgb(0 0 0 / 30%);;
+}
+
+.string-with-error .translation {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.25rem;
+}
+.string-with-error .translation .translation-text {
+  background-color: brown;
+  padding: 0 0.5rem;
+  border-radius: 3px;
+}
+.string-with-error .key {
+  display: flex;
+  gap: 0.25rem;
+  padding: 0.25rem;
 }
 
 ::-webkit-scrollbar {

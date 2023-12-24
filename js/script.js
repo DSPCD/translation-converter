@@ -53,7 +53,27 @@ const TRANSLATION_FIX = {
   "base_CutsceneBGM0_0": "Musics/df-cutscene-en",
 }
 
+const SOURCEVARIABLES = {
+  "base_配送线路数量提示1_3": "{0} available route(s) / {1} route(s) out of range"
+}
+
 let SELECTED_LOCALE = 'en';
+
+let SOURCE;
+async function fetchData() {
+  try {
+    const response = await fetch('./js/DysonSphereProgram_The_Dark_Fog.json');
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    SOURCE = await response.json();
+  } catch (error) {
+    console.error('There was a problem with the fetch operation:', error);
+  }
+}
+fetchData();
+
+let ERRORSTRINGS = {}
 
 // populate the drop-down list
 function initLocales() {
@@ -91,18 +111,20 @@ async function downloadTranslation() {
   const formattedLocale = SELECTED_LOCALE.replace("_", "-");
   convertTranslations()
     .then(function (translationFiles) {
-      translationFiles.forEach(function (value, key) {
-        translationsFolder.file(key.concat(".txt"), value);
-      });
-      // generate and download zip
-      translationZip
-        .generateAsync({ type: "blob" })
-        .then(function (content) {
-          saveAs(content, `dsp-translation-${formattedLocale}.zip`);
-        })
-        .catch(function (error) {
-          errorHandler(error);
+      if(translationFiles){
+        translationFiles.forEach(function (value, key) {
+          translationsFolder.file(key.concat(".txt"), value);
         });
+        // generate and download zip
+        translationZip
+          .generateAsync({ type: "blob" })
+          .then(function (content) {
+            saveAs(content, `dsp-translation-${formattedLocale}.zip`);
+          })
+          .catch(function (error) {
+            errorHandler(error);
+          });
+      }
     })
     .catch(function (error) {
       errorHandler(error);
@@ -192,7 +214,30 @@ async function convertTranslations() {
   });
 }
 
+function Copy(element){
+  let text_to_copy = element.value;
+  element.select();
+  if (!navigator.clipboard){
+    // use old commandExec() way
+    let $temp = $("<input>");
+    $("body").append($temp);
+    $temp.val($(element).text()).select();
+    document.execCommand("copy");
+    $temp.remove();
+  } else{
+    navigator.clipboard.writeText(text_to_copy).then(
+      function(){
+        console.log("text copied!"); // success 
+      })
+    .catch(
+      function() {
+      console.log("error copying text"); // error
+    });
+  }
+}
+
 function createFilesFromJson(data) {
+  let error = false;
   let filename = null;
   let fileContent = "";
   let translationFiles = new Map();
@@ -205,8 +250,9 @@ function createFilesFromJson(data) {
     fileContent = "";
   }
 
-  const keysArray = Object.keys(data);
-
+  let errorStrings = document.getElementById('error-strings');
+  let stringsWithError = "";
+  
   Object.keys(data).forEach(function (key) {
     let file, original, questionMark, num;
 
@@ -229,6 +275,43 @@ function createFilesFromJson(data) {
       closeResetFile(file);
     }
 
+    if(SOURCE[key]){
+      let sourceVariables = SOURCE[key].match(/\{(\d+|\[\d+\])\}/g);
+      if(sourceVariables){
+        let containsVariable = sourceVariables.every(variable => value.includes(variable));
+        if(!containsVariable){
+          error = true;
+          stringsWithError = `<div class="string-with-error">
+          <div class="key">
+            <span class="text">Key:</span>
+            <input type="text" readonly class="text" onclick="Copy(this)" value=${key}>
+          </div>
+          <div class="source">
+            <span class="text">Source:</span>
+            <span class="translation-text">${SOURCE[key]}</span>
+          </div>
+          <div class="translation">
+            <span class="text">Translation:</span>
+            <span class="translation-text">${value}</span>
+          </div>`;
+
+          sourceVariables.forEach((variable, index) => {
+            if (!value.includes(variable)) {
+              //missingPlaceholders.push(variable);
+              stringsWithError += `<div class="missing">
+              <span class="text">Missing variables:</span>
+              <span class="variable-missing">${variable}</span>
+              </div>`
+            }
+          });
+          stringsWithError += `</div>`;
+          
+          errorStrings.innerHTML += stringsWithError;
+          
+        }
+      }
+    }
+
     if (TRANSLATION_FIX[key]) {
       fileContent += `${original}\t${questionMark}\t${num}\t${TRANSLATION_FIX[key]}\n`;
     } else {
@@ -240,9 +323,16 @@ function createFilesFromJson(data) {
     }
   })
 
-  closeResetFile(filename);
+  if(error){
+    stringsWithError = `<div class="translation-error">⚠ TRANSLATION WITH ERROR, NEEDS A FIX OR IT WILL NOT WORK ⚠</div>`;
+    errorStrings.insertAdjacentHTML('afterbegin', stringsWithError)
+  }
 
-  return translationFiles;
+  closeResetFile(filename);
+  if(!error){
+    return translationFiles;
+  }
+  
 }
 
 function errorHandler(error) {
