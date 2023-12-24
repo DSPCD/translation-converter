@@ -174,8 +174,9 @@ async function convertTranslations() {
 
     reader.onload = function () {
       const jsonString = reader.result;
+      let jsonData;
       try {
-        const jsonData = JSON.parse(jsonString);
+        jsonData = JSON.parse(jsonString);
       } catch (error) {
         reject(new Error("JSON parsing: ".concat(error)));
         return;
