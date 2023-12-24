@@ -74,6 +74,7 @@ function updateLocale(select) {
 }
 
 async function downloadTranslation() {
+  clearErrors();
   // initialize zip
   let translationZip = new JSZip();
 
@@ -87,33 +88,43 @@ async function downloadTranslation() {
   let translationsFolder = translationZip.folder(LOCALES.get(SELECTED_LOCALE).folder);
   // convert json to a map containing a blob for each file
   // then add each file in the language folder
-  convertTranslations().then(function (translationFiles) {
-    translationFiles.forEach(function (value, key) {
-      translationsFolder.file(key.concat(".txt"), value);
-    });
-    // generate and download zip
-    translationZip
-      .generateAsync({ type: "blob" }).then(function (content) {
-        saveAs(content, "translation.zip");
+  const formattedLocale = SELECTED_LOCALE.replace("_", "-");
+  convertTranslations()
+    .then(function (translationFiles) {
+      translationFiles.forEach(function (value, key) {
+        translationsFolder.file(key.concat(".txt"), value);
       });
-  });
+      // generate and download zip
+      translationZip
+        .generateAsync({ type: "blob" })
+        .then(function (content) {
+          saveAs(content, `dsp-translation-${formattedLocale}.zip`);
+        })
+        .catch(function (error) {
+          errorHandler(error);
+        });
+    })
+    .catch(function (error) {
+      errorHandler(error);
+    });;
 }
 
-async function downloadCrowdinZip() {
-  let translationUrl = CROWDIN_URL.concat(SELECTED_LOCALE.replace("_", "-")).concat(".zip");
-  try {
-    const response = await fetch(translationUrl, {
-      mode: "no-cors",
-      headers: {
-        "Content-Type": "application/zip"
-      }
-    });
-    const crowdinZip = await response.blob();
-    return crowdinZip;
-  } catch (error) {
-    console.error(`Download error: ${error.message}`);
-  }
-}
+// -- NOT WORKING YET
+// async function downloadCrowdinZip() {
+//   let translationUrl = CROWDIN_URL.concat(SELECTED_LOCALE.replace("_", "-")).concat(".zip");
+//   try {
+//     const response = await fetch(translationUrl, {
+//       mode: "no-cors",
+//       headers: {
+//         "Content-Type": "application/zip"
+//       }
+//     });
+//     const crowdinZip = await response.blob();
+//     return crowdinZip;
+//   } catch (error) {
+//     console.error(`Download error: ${error.message}`);
+//   }
+// }
 
 function generateHeader() {
   let localeProps = LOCALES.get(SELECTED_LOCALE);
@@ -163,12 +174,17 @@ async function convertTranslations() {
 
     reader.onload = function () {
       const jsonString = reader.result;
-      const jsonData = JSON.parse(jsonString);
+      try {
+        const jsonData = JSON.parse(jsonString);
+      } catch (error) {
+        reject(new Error("JSON parsing: ".concat(error)));
+        return;
+      }
       resolve(createFilesFromJson(jsonData));
     };
 
     reader.onerror = function () {
-      reject(new Error("Error reading file"));
+      reject(new Error("File reading failed"));
     };
 
     reader.readAsText(file);
@@ -226,4 +242,18 @@ function createFilesFromJson(data) {
   closeResetFile(filename);
 
   return translationFiles;
+}
+
+function errorHandler(error) {
+  console.log(error);
+  updateErrors(error);
+}
+
+function clearErrors() {
+  updateErrors("");
+}
+
+function updateErrors(error) {
+  const errorDisplay = document.getElementById("ErrorDisplay");
+  errorDisplay.textContent = error;
 }
