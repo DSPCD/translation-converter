@@ -62,7 +62,7 @@ let SELECTED_LOCALE = 'en';
 let SOURCE;
 async function fetchData() {
   try {
-    const response = await fetch('./js/DysonSphereProgram_The_Dark_Fog.json');
+    const response = await fetch('./client/js/DysonSphereProgram_The_Dark_Fog.json');
     if (!response.ok) {
       throw new Error('Network response was not ok');
     }
@@ -111,7 +111,7 @@ async function downloadTranslation() {
   const formattedLocale = SELECTED_LOCALE.replace("_", "-");
   convertTranslations()
     .then(function (translationFiles) {
-      if(translationFiles){
+      if (translationFiles) {
         translationFiles.forEach(function (value, key) {
           translationsFolder.file(key.concat(".txt"), value);
         });
@@ -214,25 +214,25 @@ async function convertTranslations() {
   });
 }
 
-function Copy(element){
+function Copy(element) {
   let text_to_copy = element.value;
   element.select();
-  if (!navigator.clipboard){
+  if (!navigator.clipboard) {
     // use old commandExec() way
     let $temp = $("<input>");
     $("body").append($temp);
     $temp.val($(element).text()).select();
     document.execCommand("copy");
     $temp.remove();
-  } else{
+  } else {
     navigator.clipboard.writeText(text_to_copy).then(
-      function(){
+      function () {
         console.log("text copied!"); // success 
       })
-    .catch(
-      function() {
-      console.log("error copying text"); // error
-    });
+      .catch(
+        function () {
+          console.log("error copying text"); // error
+        });
   }
 }
 
@@ -252,7 +252,7 @@ function createFilesFromJson(data) {
 
   let errorStrings = document.getElementById('error-strings');
   let stringsWithError = "";
-  
+
   Object.keys(data).forEach(function (key) {
     let file, original, questionMark, num;
 
@@ -275,11 +275,11 @@ function createFilesFromJson(data) {
       closeResetFile(file);
     }
 
-    if(SOURCE[key]){
+    if (SOURCE[key]) {
       let sourceVariables = SOURCE[key].match(/\{(\d+|\[\d+\])\}/g);
-      if(sourceVariables){
+      if (sourceVariables) {
         let containsVariable = sourceVariables.every(variable => value.includes(variable));
-        if(!containsVariable){
+        if (!containsVariable) {
           error = true;
           stringsWithError = `<div class="string-with-error">
           <div class="key">
@@ -305,9 +305,9 @@ function createFilesFromJson(data) {
             }
           });
           stringsWithError += `</div>`;
-          
+
           errorStrings.innerHTML += stringsWithError;
-          
+
         }
       }
     }
@@ -323,16 +323,16 @@ function createFilesFromJson(data) {
     }
   })
 
-  if(error){
+  if (error) {
     stringsWithError = `<div class="translation-error">⚠ TRANSLATION WITH ERROR, NEEDS A FIX OR IT WILL NOT WORK ⚠</div>`;
     errorStrings.insertAdjacentHTML('afterbegin', stringsWithError)
   }
 
   closeResetFile(filename);
-  if(!error){
+  if (!error) {
     return translationFiles;
   }
-  
+
 }
 
 function errorHandler(error) {
