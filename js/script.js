@@ -1,4 +1,4 @@
-const VERSION = "0.10.28.21011";
+const VERSION = "0.10.28.21150";
 
 const CROWDIN_URL = "https://crowdin.com/backend/download/project/dyson-sphere-program/";
 
@@ -57,7 +57,7 @@ const SOURCEVARIABLES = {
   "base_配送线路数量提示1_3": "{0} available route(s) / {1} route(s) out of range"
 }
 
-let SELECTED_LOCALE = 'en';
+let SELECTED_LOCALE = !localStorage.dspConverterLang ? 'en' : localStorage.dspConverterLang;
 
 let SOURCE;
 async function fetchData() {
@@ -91,6 +91,7 @@ function initLocales() {
 
 function updateLocale(select) {
   SELECTED_LOCALE = select.value;
+  localStorage.dspConverterLang = SELECTED_LOCALE;
 }
 
 async function downloadTranslation() {
@@ -348,3 +349,16 @@ function updateErrors(error) {
   const errorDisplay = document.getElementById("ErrorDisplay");
   errorDisplay.textContent = error;
 }
+
+
+document.querySelectorAll('.tabsnav ul li').forEach((tab, index) => {
+  tab.addEventListener('click', () => {
+    const tabsContainer = tab.closest('.tabbedContent');
+    const tabsNav = tabsContainer.querySelectorAll('.tabsnav ul li');
+    const tabsContent = tabsContainer.querySelectorAll('.tabscontent .tab');
+    tabsNav.forEach((navItem) => navItem.classList.remove('active'));
+    tab.classList.add('active');
+    tabsContent.forEach((contentItem) => contentItem.classList.remove('active'));
+    tabsContent[index].classList.add('active');
+  });
+});

@@ -168,7 +168,7 @@ body {
   border-radius: 3px;
 }
 
-.locale-selection {
+section {
   display: flex;
   background: rgba(38, 50, 56, 0.4);
   margin: 1px 0;
@@ -178,7 +178,7 @@ body {
   gap: 0.5rem;
 }
 
-.locale-selection input {
+section input {
   background-color: #fff;
   border: none;
   margin-left: 0.5rem;
