@@ -1,5 +1,7 @@
 const VERSION = "0.10.28.21150";
 
+document.getElementById('game-version').innerHTML = `v. ${VERSION}`;
+
 const CROWDIN_URL = "https://crowdin.com/backend/download/project/dyson-sphere-program/";
 
 class Locale {

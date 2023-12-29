@@ -102,6 +102,13 @@ body {
   background-repeat: no-repeat;
 }
 
+#game-version {
+  display: flex;
+  line-height: normal;
+  color: #f9ff9c;
+  text-shadow: 0px 0px var(--blur_2) var(--lime), 0px 0px var(--blur_1) var(--lime);
+}
+
 .info {
   display: flex;
   align-items: center;
