@@ -31,10 +31,11 @@ function checkWebpSupport() {
 }
 
 function changeBackgroundImage() {
+  let basePath = window.location.origin + window.location.pathname;
   const selectedImage = getRandomImage();
   const extension = checkWebpSupport() ? 'webp' : 'jpg';
   const imageUrl = `${selectedImage.img}.${extension}`;
-  body.style.backgroundImage = `url('../assets/bg/${imageUrl}')`;
+  body.style.backgroundImage = `url('${basePath}assets/bg/${imageUrl}')`;
   let bgCreditBlock = document.getElementById('bg-credit-block');
   let bgCredit = document.getElementById('bgcredit');
   if(selectedImage.credit){
