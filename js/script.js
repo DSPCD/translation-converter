@@ -1,4 +1,4 @@
-const VERSION = "0.10.28.21247";
+const VERSION = "0.10.28.21308";
 
 document.getElementById('game-version').innerHTML = `v. ${VERSION}`;
 
