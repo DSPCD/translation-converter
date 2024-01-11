@@ -4,6 +4,50 @@ document.getElementById('game-version').innerHTML = `v. ${VERSION}`;
 
 const CROWDIN_URL = "https://crowdin.com/backend/download/project/dyson-sphere-program/";
 
+const bgImages = [
+  {img: "dspbg_0", credit: null},
+  {img: "dspbg_1", credit: null},
+  {img: "dspbg_2", credit: "u/sword112345"},
+  {img: "dspbg_3", credit: "u/dbmsX"},
+  {img: "dspbg_4", credit: "u/nthexwn"},
+  {img: "dspbg_5", credit: "u/Sudden_Explorer_7280"},
+  {img: "dspbg_6", credit: "u/dmigowski"},
+  {img: "dspbg_7", credit: "u/fergusonia_ssi"},
+  {img: "dspbg_8", credit: "u/FreyaAstral"},
+  {img: "dspbg_9", credit: "u/Efficient-Frame-7334"},
+  {img: "dspbg_10", credit: "u/KrAsTaLaR"},
+];
+
+const body = document.body;
+
+function getRandomImage() {
+  const randomIndex = Math.floor(Math.random() * bgImages.length);
+  return bgImages[randomIndex];
+}
+
+function checkWebpSupport() {
+  const canvas = document.createElement('canvas');
+  return canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0;
+}
+
+function changeBackgroundImage() {
+  const selectedImage = getRandomImage();
+  const extension = checkWebpSupport() ? 'webp' : 'jpg';
+  const imageUrl = `${selectedImage.img}.${extension}`;
+  body.style.backgroundImage = `url('../assets/bg/${imageUrl}')`;
+  let bgCreditBlock = document.getElementById('bg-credit-block');
+  let bgCredit = document.getElementById('bgcredit');
+  if(selectedImage.credit){
+    bgCreditBlock.classList.remove('hidden');
+    bgCredit.textContent = selectedImage.credit;
+  } else{
+    bgCreditBlock.classList.add('hidden');
+    bgCredit.textContent = "";
+  }
+  
+}
+changeBackgroundImage();
+
 class Locale {
   constructor(name, folder, latin) {
     this.name = name;
