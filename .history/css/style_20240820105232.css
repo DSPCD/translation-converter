@@ -179,8 +179,8 @@ footer {
 #last-update {
   display: flex;
   line-height: normal;
-  color: var(--green);
-  text-shadow: 0px 0px var(--blur_2) var(--lightgreen), 0px 0px var(--blur_1) var(--lightgreen);
+  color: var(--orange);
+  text-shadow: 0px 0px var(--blur_2) var(--orange), 0px 0px var(--blur_1) var(--orange);
 }
 
 .info {

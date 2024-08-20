@@ -3,11 +3,23 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 3,
             "patches": [
                 {
                     "date": 1723779543442,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1724161739271,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-const VERSION = \"0.10.30.23272\";\r\n+const VERSION = \"0.10.30.23341\";\r\n \r\n document.getElementById('game-version').innerHTML = `v. ${VERSION}`;\r\n \r\n const CROWDIN_URL = \"https://crowdin.com/backend/download/project/dyson-sphere-program/\";\r\n"
+                },
+                {
+                    "date": 1724161803630,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,8 @@\n const VERSION = \"0.10.30.23341\";\r\n \r\n+const LASTUPDATE = \"20/08/2024\";\r\n+\r\n document.getElementById('game-version').innerHTML = `v. ${VERSION}`;\r\n \r\n const CROWDIN_URL = \"https://crowdin.com/backend/download/project/dyson-sphere-program/\";\r\n \r\n"
+                },
+                {
+                    "date": 1724161888835,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n \r\n const LASTUPDATE = \"20/08/2024\";\r\n \r\n document.getElementById('game-version').innerHTML = `v. ${VERSION}`;\r\n+document.getElementById('last-update').innerHTML = `${LASTUPDATE}`;\r\n \r\n const CROWDIN_URL = \"https://crowdin.com/backend/download/project/dyson-sphere-program/\";\r\n \r\n const bgImages = [\r\n"
                 }
             ],
             "date": 1723779543442,

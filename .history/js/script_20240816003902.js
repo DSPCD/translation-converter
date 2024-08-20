@@ -1,9 +1,6 @@
-const VERSION = "0.10.30.23341";
-
-const LASTUPDATE = "20/08/2024";
+const VERSION = "0.10.30.23272";
 
 document.getElementById('game-version').innerHTML = `v. ${VERSION}`;
-document.getElementById('last-update').innerHTML = `${LASTUPDATE}`;
 
 const CROWDIN_URL = "https://crowdin.com/backend/download/project/dyson-sphere-program/";
 

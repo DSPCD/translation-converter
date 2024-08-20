@@ -4286,7 +4286,7 @@
   "prototype_I物流运输站_3": "It is the hub of the planetary logistics system. Logistics Drones will automatically deliver the cargo to the respective stations once you have specified the supply/demand requirements.\r\n(Transportation is limited to its own planet)",
   "prototype_I星际物流运输站_3": "Giant space elevators make it easier to transport materials between planets. They can connect factories on different planets to form a massive industrial empire.",
   "prototype_I轨道采集器_3": "It is used to collect resources from gas giants. It needs to consume the collected fuel materials to power the collector to work in orbit.",
-  "prototype_I储液罐_3": "Storage Tank has a larger capacity for containing fluids than a Depot. Dismantling a tank will destroy the fluid stored within.",
+  "prototype_I储液罐_3": "Storage Tank has a larger capacity for containing fluids than a Depot.",
   "prototype_I电力感应塔_3": "It is a power transmission facility with a particular connection length and coverage that can extend the supply range of the Power Grid.",
   "prototype_I无线输电塔_3": "It is a remote power transmission facility that can draw electricity from the Power Grid and charge the mecha.",
   "prototype_I卫星配电站_3": "It is a wide-area distribution facility capable of transmitting power over a longer range, thereby enabling broader coverage.",
