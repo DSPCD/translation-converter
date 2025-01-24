@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 7,
+            "activePatchIndex": 8,
             "patches": [
                 {
                     "date": 1723779543442,
@@ -36,6 +36,10 @@
                 {
                     "date": 1733443956765,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n-const VERSION = \"0.10.31.24667\";\r\n+const VERSION = \"0.10.31.24697\";\r\n \r\n-const LASTUPDATE = \"Updated 2 December 2024\";\r\n+const LASTUPDATE = \"Updated 5 December 2024\";\r\n \r\n document.getElementById('game-version').innerHTML = `v. ${VERSION}`;\r\n document.getElementById('last-update').innerHTML = `${LASTUPDATE}`;\r\n \r\n"
+                },
+                {
+                    "date": 1737685966638,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n-const VERSION = \"0.10.31.24697\";\r\n+const VERSION = \"0.10.32.25496\";\r\n \r\n-const LASTUPDATE = \"Updated 5 December 2024\";\r\n+const LASTUPDATE = \"Updated 23 January 2025\";\r\n \r\n document.getElementById('game-version').innerHTML = `v. ${VERSION}`;\r\n document.getElementById('last-update').innerHTML = `${LASTUPDATE}`;\r\n \r\n"
                 }
             ],
             "date": 1723779543442,
