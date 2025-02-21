@@ -1,6 +1,6 @@
-const VERSION = "0.10.32.25595";
+const VERSION = "0.10.32.25699";
 
-const LASTUPDATE = "Updated 22 February 2025";
+const LASTUPDATE = "Updated 21 February 2025";
 
 document.getElementById('game-version').innerHTML = `v. ${VERSION}`;
 document.getElementById('last-update').innerHTML = `${LASTUPDATE}`;
