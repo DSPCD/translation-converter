@@ -1,6 +1,6 @@
-const VERSION = "0.10.33.27005";
+const VERSION = "0.10.34.28289";
 
-const LASTUPDATE = "Updated 20 October 2025";
+const LASTUPDATE = "Updated 22 January 2026";
 
 document.getElementById('game-version').innerHTML = `v. ${VERSION}`;
 document.getElementById('last-update').innerHTML = `${LASTUPDATE}`;
@@ -204,14 +204,22 @@ function generateHeader() {
 
   let headerHeader = `[Localization Project]
 Version=1.1
-2052,简体中文,zhCN,zh,1033,1
-1033,English,enUS,en,2052,0`
+2052,简体中文,zh-CN,zh,1033,1
+1033,English,en-US,en,2052,0
+1036,français,fr-FR,fr,1033,0,0
+1031,Deutsch,de-DE,de,1033,0,0
+1041,日本語,ja-JA,ja,1033,1,0
+1042,한국어,ko-KO,ko,1033,1,0
+3082,Español,es-ES,es,1033,0,0`
 
   let headerFooter = `
 base=0
 combat=0
+creation=0
 prototype=-1
+keys=0
 dictionary=3
+parameters=0
 [outsource]=-6
 [user]=-9
 `;
