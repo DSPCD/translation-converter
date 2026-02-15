@@ -1,0 +1,177 @@
+无按键		5	No Key Assigned
+鼠标左键		5	Left Mouse Button
+鼠标右键		5	Right Mouse Button
+鼠标中键		5	Middle Mouse Button
+鼠标键3		5	Mouse Button 3
+鼠标键4		5	Mouse Button 4
+鼠标键5		5	Mouse Button 5
+鼠标键6		5	Mouse Button 6
+空格键		3	Space
+小键盘0		3	Keypad 0
+小键盘1		3	Keypad 1
+小键盘2		3	Keypad 2
+小键盘3		3	Keypad 3
+小键盘4		3	Keypad 4
+小键盘5		3	Keypad 5
+小键盘6		3	Keypad 6
+小键盘7		3	Keypad 7
+小键盘8		3	Keypad 8
+小键盘9		3	Keypad 9
+小键盘.		3	Keypad .
+小键盘/		3	Keypad /
+小键盘*		3	Keypad *
+小键盘-		3	Keypad -
+小键盘+		3	Keypad +
+小键盘=		3	Keypad =
+小键盘Enter		3	Keypad Enter
+字母数字键0		3	Alphanumeric key 0
+字母数字键1		3	Alphanumeric key 1
+字母数字键2		3	Alphanumeric key 2
+字母数字键3		3	Alphanumeric key 3
+字母数字键4		3	Alphanumeric key 4
+字母数字键5		3	Alphanumeric key 5
+字母数字键6		3	Alphanumeric key 6
+字母数字键7		3	Alphanumeric key 7
+字母数字键8		3	Alphanumeric key 8
+字母数字键9		3	Alphanumeric key 9
+左Win键		3	Left Win key
+右Win键		3	Right Win key
+双击		3	Double click 
+长按		3	Press and hold 
+拖动		3	 Drag
+鼠标滚轮上滚		3	Mouse scroll up
+鼠标滚轮下滚		3	Mouse scroll down
+TK无按键		5	Unbound
+TK鼠标左键		5	LMB
+TK鼠标右键		5	RMB
+TK鼠标中键		5	MMB
+TK鼠标键3		5	MB3
+TK鼠标键4		5	MB4
+TK鼠标键5		5	MB5
+TK鼠标键6		5	MB6
+TK空格键		5	Space
+TK小键盘0	?	5	Num 0
+TK小键盘1	?	5	Num 1
+TK小键盘2	?	5	Num 2
+TK小键盘3	?	5	Num 3
+TK小键盘4	?	5	Num 4
+TK小键盘5	?	5	Num 5
+TK小键盘6	?	5	Num 6
+TK小键盘7	?	5	Num 7
+TK小键盘8	?	5	Num 8
+TK小键盘9	?	5	Num 9
+TK小键盘+	?	5	Num +
+TK小键盘-	?	5	Num -
+TK小键盘*	?	5	Num *
+TK小键盘/	?	5	Num /
+TK小键盘=	?	5	Num =
+TK小键盘.	?	5	Num .
+TK小键盘Enter	?	5	NumEnter
+TK数字键0	?	5	0
+TK数字键1	?	5	1
+TK数字键2	?	5	2
+TK数字键3	?	5	3
+TK数字键4	?	5	4
+TK数字键5	?	5	5
+TK数字键6	?	5	6
+TK数字键7	?	5	7
+TK数字键8	?	5	8
+TK数字键9	?	5	9
+TK左Win键		5	L Win
+TK右Win键		5	R Win
+TK双击		5	Double click 
+TK长按		5	Hold 
+TK拖动		5	 and drag
+TK鼠标滚轮上滚		3	Scroll Up
+TK鼠标滚轮下滚		3	Scroll Down
+KEY向前移动		3	Move forward
+KEY向后移动		3	Move backward
+KEY向左移动		3	Move left
+KEY向右移动		3	Move right
+KEY移动至目标		3	Move to target
+KEY下达多个指令		3	Make multiple commands
+KEY跳跃		2	Jump
+KEY起飞		3	Take off
+KEY飞行上升		3	Fly up
+KEY飞行下降		3	Fly down
+KEY航行左侧飞		3	Roll left
+KEY航行右侧飞		3	Roll right
+KEY打开物品清单		3	Open Inventory
+KEY关闭面板		3	Close Panel
+KEY打开游戏菜单		3	Open game menu
+KEY采集		3	Collect
+KEY进入拆除模式		3	Enter Dismantle Mode
+KEY确认建造		3	Confirm to build
+KEY复制建筑操作		3	Copy selected building
+KEY打开建筑面板		3	Open Building Panel
+KEY航行模式加速		3	Speed up in Cruise Mode
+KEY开启曲速		3	Turn on/off Warp Drive
+KEY复制配方		2	Copy Recipe
+KEY粘贴配方		2	Paste Recipe
+KEY复制蓝图		3	Batch copy and create Blueprint
+KEY粘贴蓝图		2	Paste Last Created Blueprint
+KEY打开分析面板		3	Open Statistics Panel
+KEY打开仪表盘		3	Open Dashboard
+KEY打开全局控制面板		3	Open Logistics Control Panel
+KEY打开科技树		3	Open Technology Tree
+KEY打开蓝图库		3	Open Blueprint Library
+KEY打开机体面板		3	Open Mecha Panel
+KEY打开制造面板		3	Open Replicator
+KEY打开详情显示		3	Open Detail Display
+KEY打开行星视图		3	Open Planet View
+KEY打开星图		3	Open Starmap
+KEY打开戴森球面板		3	Open Dyson Sphere
+KEY镜头对准北极		3	Align camera to North Pole
+KEY镜头旋转		3	Rotate camera
+KEY镜头翻滚		3	Roll camera
+KEY镜头拉远		3	Zoom out
+KEY镜头拉近		3	Zoom in
+KEY进入战斗模式		3	Enter Combat Interface
+KEY能量盾爆破蓄力		3	Energy Shield Burst Charge
+KEY进入建造模式		2	Enter Construction Mode
+KEY上帝建造模式机甲移动		3	Move mecha in God Mode
+KEY顺时针旋转建筑		3	Rotate building clockwise
+KEY逆时针旋转建筑		3	Rotate building counterclockwise
+KEY采矿机忽略网格吸附		3	Mining Machine ignores grid snapping
+KEY切换网格吸附方式		3	Switch grid snap mode (Mining Machine, Tesla Tower, etc.)
+KEY扩大地基光标		2	Expand foundation cursor
+KEY缩小地基光标		2	Shrink foundation cursor
+KEY拖动铺设直线地基		3	Drag and lay straight foundation
+KEY拿起物品		3	Pick up items
+KEY拆分物品		3	Split items
+KEY拿起多格同类物品		3	Pick up items of the same type from multiple slots
+KEY拿起全部同类物品		3	Pick up all items of the same type
+KEY放回物品		3	Put items back
+KEY转移一组物品		3	Transfer a group of items
+KEY转移全部物品		3	Transfer all items
+KEY丢弃物品		3	Discard item
+KEY传送带不吸附建筑		3	Conveyor Belt doesn't snap to building ; up / down 5 level
+KEY传送带搭建目标高度升高一级		3	Build Conveyor Belt one level up
+KEY传送带搭建目标高度降低一级		3	Build Conveyor Belt one level down
+KEY重置传送带搭建目标高度		3	Reset Conveyor Belt to ground level
+KEY切换传送带路径		3	Switch Conveyor Belt's path
+KEY切换传送带升降路径		3	Switch Conveyor Belt's path when lift
+KEY向左倾斜传送带		3	Decrease Conveyor Belt's tilt
+KEY向右倾斜传送带		3	Increase Conveyor Belt's tilt
+KEY传送带基座吸附鼠标指针		3	Conveyor Belt's base snaps to the mouse pointer
+KEY向右切换分拣器设置		3	Switch to the item on the right
+KEY向左切换分拣器设置		3	Switch to the item on the left
+KEY隐藏UI		3	Hide UI
+KEY显示帧率		2	Display FPS
+KEY航行模式切换鼠标锁定		3	Unlock mouse in Cruise Mode
+KEY摆正视角		3	Align Starmap view
+KEY拿起任意数量同类物品		3	Pick up any number of items of the same type
+KEY打开指引手册		3	Open Guidebook
+KEY切换分流器样式		3	Switch Splitter model
+KEY开启关闭夜晚指示灯光		3	Turn night indicator lights on/off
+KEY进入升级模式		2	Enter Upgrade Mode
+KEY连锁拆除升级		2	Chain Dismantle / Upgrade
+KEY清除分拣器		3	Clear copied Sorter
+KEY快捷交换物品		3	Fast transfer items when cursor points to a building
+KEY快捷填充材料		3	Fast fill materials in the facility tab
+KEY快捷取出产物		3	Fast take out items in the facility tab
+KEY蓝图模式隐藏正确建筑		3	Display only invalid buildings in Blueprint Paste mode
+KEY蓝图自动铺地基		3	Automatically lay foundations where needed in the blueprint
+KEY截图模式		3	Enter/Exit Screenshot Mode
+KEY确认截图		3	Capture Screenshot in Screenshot Mode
+KEY矩形拖拽建造		3	Drag to construct a rectangular area

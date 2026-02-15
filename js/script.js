@@ -1,6 +1,6 @@
 const VERSION = "0.10.34.28470";
 
-const LASTUPDATE = "Updated 14 February 2026";
+const LASTUPDATE = "Updated 15 February 2026";
 
 document.getElementById('game-version').innerHTML = `v. ${VERSION}`;
 document.getElementById('last-update').innerHTML = `${LASTUPDATE}`;
@@ -161,11 +161,40 @@ async function downloadTranslation() {
   // then add each file in the language folder
   const formattedLocale = SELECTED_LOCALE.replace("_", "-");
   convertTranslations()
-    .then(function (translationFiles) {
+    .then(async function (translationFiles) {
       if(translationFiles){
         translationFiles.forEach(function (value, key) {
           translationsFolder.file(key.concat(".txt"), value);
         });
+
+        const extraFiles = [
+          "[outsource].txt",
+          "[user].txt",
+          "combat.txt",
+          "keys.txt",
+          "parameters.txt"
+        ];
+
+        for (const fileName of extraFiles) {
+          try {
+            // Fetch the file from your local 'files' folder
+            const response = await fetch(`./files/${fileName}`);
+            
+            if (response.ok) {
+              const fileBlob = await response.blob();
+              
+              // This adds the files inside the numbered language folder.
+              // If you need them in the root of the zip instead, change 
+              // 'translationsFolder' to 'translationZip' on the line below:
+              translationsFolder.file(fileName, fileBlob);
+            } else {
+              console.warn(`Could not find ${fileName} in the files folder.`);
+            }
+          } catch (error) {
+            console.error(`Error fetching ${fileName}:`, error);
+          }
+        }
+
         // generate and download zip
         translationZip
           .generateAsync({ type: "blob" })
@@ -315,7 +344,11 @@ function createFilesFromJson(data) {
   Object.keys(data).forEach(function (key) {
     let file, original, questionMark, num;
 
-    let value = data[key].replace(/\n/g, "\\n").replace(/\r/g, "\\r");
+    let value = data[key]
+    // Matches the literal text "\n", UNLESS it's the start of a tag
+    .replace(/\\n(?![a-zA-Z0-9]*-?;)/g, "\\\\n")
+    // Matches the literal text "\r", UNLESS it's the start of a tag
+    .replace(/\\r(?![a-zA-Z0-9]*-?;)/g, "\\\\r");
 
     let props = key.split("_");
 
@@ -372,12 +405,12 @@ function createFilesFromJson(data) {
     }
 
     if (TRANSLATION_FIX[key]) {
-      fileContent += `${original}\t${questionMark}\t${num}\t${TRANSLATION_FIX[key]}\n`;
+      fileContent += `${original}\t${questionMark}\t${num}\t${TRANSLATION_FIX[key]}\r\n`;
     } else {
       if (key === "base_需要重启完全生效_3") {
-        fileContent += `${original}\t${questionMark}\t${num}\t${value} v.${VERSION}\r`;
+        fileContent += `${original}\t${questionMark}\t${num}\t${value} v.${VERSION}\r\n`;
       } else {
-        fileContent += `${original}\t${questionMark}\t${num}\t${value}\r`;
+        fileContent += `${original}\t${questionMark}\t${num}\t${value}\r\n`;
       }
     }
   })
