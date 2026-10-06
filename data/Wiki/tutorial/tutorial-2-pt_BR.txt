@@ -1,0 +1,14 @@
+﻿{$Text|fontsize=16;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,30}
+O que é uma Esfera de Dyson?
+{$Text|fontsize=14;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,20}
+À medida que as civilizações se desenvolvem no vasto universo, suas demandas de energia aumentam. Explorar as fontes de energia das estrelas é inevitável quando a energia de um planeta já não é suficiente para sustentar o desenvolvimento de toda a civilização.
+
+O Sr. Freeman Dyson propôs um conceito lendário em 1960: a Esfera de Dyson, <color="#FD965ECC">uma megaestrutura hipotética que envolve completamente uma estrela e captura uma grande porcentagem de sua produção de energia.</color>
+{$Video|clip=Videos/tutorial-2-ld;size=420,180}
+{$Text|fontsize=14;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,20}
+Na escala de Kardashev:
+Uma civilização do tipo I pode explorar e usar toda a energia disponível em seu planeta.
+Uma civilização do tipo II pode coletar a energia de um sistema estelar inteiro e até permitir que a matéria exceda a velocidade da luz.
+Uma civilização do tipo III pode capturar e usar a energia de toda a Galáxia.
+
+<color="#FD965ECC">Se os seres humanos forem capazes de construir uma Esfera de Dyson, eles iniciarão a jornada rumo a se tornarem uma civilização do tipo II.</color>

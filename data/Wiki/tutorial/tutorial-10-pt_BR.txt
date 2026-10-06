@@ -1,0 +1,27 @@
+﻿{$Text|fontsize=16;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,30}
+Funcionamento do Receptor de Raios
+{$Text|fontsize=14;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,20}
+O Receptor de Raios pode receber raios de alta energia transmitidos de volta pela Esfera de Dyson (Enxame de Dyson). Ele possui dois modos: <color="#FD965ECC">"Geração de Energia"</color> e <color="#FD965ECC">"Geração de Fótons"</color>.
+
+No modo Geração de Energia, o Receptor de Raios envia diretamente a energia recebida para a Rede Elétrica.
+<color="#FD965ECC">O modo Geração de Fótons só é desbloqueado após aprimorar a tecnologia "Mecanismo de inversão Dirac". </color>No modo Geração de Fótons, o Receptor de Raios converte a energia recebida diretamente em "Fótons Críticos", e sua potência de recepção aumenta oito vezes.
+
+Os Fótons Críticos podem ser facilmente convertidos em Antimatéria e hidrogênio usando o Mini Colisor de Partículas, permitindo armazenar energia na forma de Antimatéria.
+{$Text|fontsize=14;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,20}
+
+Os raios de alta energia perdem energia durante a transmissão. Por isso, a eficiência de transmissão é menor no início da transmissão de energia da Esfera de Dyson para o Receptor de Raios. A eficiência pode ser aumentada aprimorando tecnologias ou mantendo o Receptor de Raios em operação.
+
+A potência de recepção básica de cada Receptor de Raios é de 6MW, mas pode ser aumentada mantendo o Receptor de Raios em operação ou consumindo Lentes Gravitacionais. Quando um Receptor de Raios está no lado noturno do planeta e não consegue receber raios, o progresso da recepção contínua de raios diminui significativamente.
+
+Quando o progresso da recepção contínua de raios chega a 100%, a potência de recepção aumenta 2,5 vezes e a perda de energia é reduzida em 40% em relação ao nível atual.
+<color="#FD965ECC">Inserir Lentes de Graviton aumenta muito a potência de recepção (lentes diferentes aumentam em quantidades diferentes); se as Lentes de Graviton tiverem Pontos de Proliferador, a potência de recepção aumenta ainda mais. </color>A tecnologia Utilização da Ionosfera Planetária dá ao Receptor de Raios mais tempo de radiação de alta energia em um ciclo de dia e noite, estendendo a altitude efetiva de recepção de raios até o limite externo da exosfera e aumentando seus tempos de operação.
+
+Considerando todos os fatores de bônus acima:
+<color="#FD965ECC">Teoricamente, a potência máxima no modo Geração de Energia é de 120MW.</color>
+<color="#FD965ECC">Teoricamente, a potência máxima no modo Geração de Fótons é de 960MW.</color>
+
+O Receptor de Raios solicitará energia à Esfera de Dyson depois que sua potência de recepção em tempo real for determinada com base nos princípios acima.
+Devido à eficiência de recepção, a potência solicitada (potência realmente retirada da Esfera de Dyson) = potência atual do Receptor de Raios / eficiência de recepção atual
+Quando o desempenho total de geração de energia da Esfera de Dyson não consegue atender às solicitações de todos os Receptores de Raios, a Esfera de Dyson distribui a energia a cada Receptor de Raios com base na potência solicitada ponderada.
+
+O Receptor de Raios solicitará à Esfera de Dyson a quantidade máxima de energia que consegue obter no momento, independentemente da carga atual da Rede Elétrica.

@@ -1,0 +1,23 @@
+﻿{$Text|fontsize=16;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,30}
+Distribution Logistics System Guide
+{$Text|fontsize=14;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,20}
+Icarus can conveniently collect items using the Logistics Distributor. <color="#61D8FFB0">Install the Logistics Distributor on top of a Depot</color> and deploy Logistics Bots, and now it will distribute the items to Icarus or other Logistics Distributors on this planet.
+
+To enable the Distribute to Icarus feature:
+1. Configure Logistics Distributor
+Open the Logistics Distributor, configure items for distribution (e.g., iron ingots), then check the <color="#FFFFFF80">[Distribute to Icarus]</color> (this option is checked by default). Deploy Logistics Bots and confirm that iron ingots are stored in the Depot.
+2. Configure Logistics List
+Press [$LKEY_34;] to open the Inventory, click the Logistics List on the left and select iron ingot. Slide the left part of the slider to specify the <color="#61D8FFB0">min</color> demand. If the number of iron ingots in the Inventory is lower than the minimum, the Logistics Distributor will automatically dispatch the Logistics Bot to <color="#61D8FFB0">replenish</color>. Slide the right part of the slider to specify the <color="#FD965EB0">max</color> demand. If the number of iron ingots in the Inventory is higher than the maximum, the Logistics Distributor will collect the <color="#FD965EB0">surplus</color>.
+{$Video|clip=Videos/tutorial-16-ld;size=420,180}
+{$Text|fontsize=14;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,20}
+The Logistics Distributor can only distribute items to or collect items from Icarus. Just switch the distribution mode to [<color="#61D8FFB0">Distribute to Icarus</color>] or [<color="#FD965EB0">Collect from Icarus</color>]. If [<color="#FD965EB0">Collect all types</color>] is checked, all items that require collecting from Icarus will be collected by the Logistics Distributor. It will also stop distributing items to other Logistics Distributors.
+
+Logistics Distributors can distribute items to each other. [<color="#FFFFFF80">Distribute to other distributors</color>] must be checked for both Logistics Distributors and their filters set to the same item. Then switch Logistics Distributor A to [<color="#61D8FFB0">Distribute to other distributors</color>] and Logistics Distributor B to [<color="#FD965EB0">"Request from other distributors"</color>]. Logistics Distributor A will then automatically distribute items to Logistics Distributor B, and vice versa.
+
+If not filter is configured for a Logistics Distributor, click [<color="#61D8FFB0">Guess Filter</color>] to automatically set one up.
+
+The Guess Filter will check the items in the Depot first. <color="#FD965EB0">If there is only one type of item in the Depot</color>, the Guess Filter will set the filter for this item.
+If there are no items in the Depot, the Guess Filter will check the <color="#FD965EB0">incoming items</color>. For example, the Depot is connected to three Sorters with filters set for the same item. The Guess Filter will then set the filter of the Logistics Distributor for this item.
+When the Depot has no items and there are no incoming items, tag a <color="#FD965EB0">sole icon</color> on the Conveyor Belt connected to the Depot, and the Guess Filter will adjust the filter to match that icon.
+
+When the items transported back by the Logistics Bot can’t be stored in the Depot, they will be temporarily <color="#FF5D4CB0">stored</color> in the Logistics Distributor. The excess items will be automatically transferred into the remaining space in the Depot or you can manually take them out.

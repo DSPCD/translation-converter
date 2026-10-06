@@ -1,0 +1,7 @@
+﻿{$Text|fontsize=16;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,30}
+Operação de cópia de fórmula
+{$Text|fontsize=14;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,20}
+<color="#FD965ECC">Cada instalação de produção deve ter uma fórmula configurada. Caso contrário, ela não funcionará.</color>
+
+Se quiser configurar a mesma fórmula (ou ajustes) para construções do mesmo tipo, pressione <color="#FD965ECC">[$LKEY_30;]</color> para copiar a instalação de produção que já tem uma fórmula. Mova o cursor do mouse até a instalação de produção desejada e pressione <color="#FD965ECC">[$LKEY_31;]</color> para colar a fórmula.
+{$Video|clip=Videos/tutorial-8-ld;size=420,180}

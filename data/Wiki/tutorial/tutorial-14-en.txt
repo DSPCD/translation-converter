@@ -1,0 +1,30 @@
+﻿{$Text|fontsize=16;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,30}
+Spray Coater and Proliferator
+{$Text|fontsize=14;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,20}
+Spray Coaters and Proliferators can significantly increase the output of the production line. You can set up the Spray Coater on the Conveyor Belt with cargo (or connect an infeed Conveyor Belt to Sprayer Coater), and <color="#FD965EB0">feed the Proliferator into the Spray Coater from the higher port</color>. Then the Sprayer Coater will automatically spray the Proliferator on the cargo when they pass through it.
+
+After being sprayed with the Proliferator, items will gain <color="#FD965EB0">"Proliferator Points", which will determine the effects of the Proliferator.</color>
+Different Proliferator Points apply different "extra products" or "production speedup" effects.
+{$Video|clip=Videos/tutorial-14-ld;size=420,180}
+{$Text|fontsize=14;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,20;tablecolwidths=0.2,0.2,0.2,0.2,0.2;tablerowheights=30,30,30,30,30,30;tablehorzalignments=0,0,0,0,0;tablevertalignments=1,1,1,1,1;tablelinecolor=#00000000}
+Proliferator Type	Proliferator Point	Production Speedup	Extra Products	Extra Power Consumption
+Mk.I	1	25.00%	12.50%	30%
+Mk.II	2	50.00%	20.00%	70%
+─	3	75.00%	22.50%	110%
+Mk.III	4	100.00%	25.00%	150%
+{$Text|fontsize=14;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,20}
+Not all items will gain the "extra products" effect after being sprayed with the Proliferator. Some items will gain other effects. For example,
+
+<color="#FD965EB0">If this item is used in the Research Mode of a Matrix Lab, it will output extra Hashes after being sprayed with the Proliferator.
+If this item is used for the Ray Receiver, it will boost the Ray Receiver's max output after being sprayed.
+If this item is an Antimatter Fuel Rod, it will boost the generation output of the facilities after being sprayed.
+If this item is a common fuel, it will increase the heating value after being sprayed with Proliferator.</color>
+
+You can hover the cursor over the item to check the details of Proliferator's effect.
+
+If you want to gain the "extra products" or "production speedup" effects during production, spray each raw material of this product with the Proliferator so that each of them gains the Proliferator Point.
+
+If there is any raw material that does not gain the Proliferator Point during production, the entire production will not deliver extra products or be sped up.
+To obtain extra products from a production process, make sure that each raw material gains the Proliferator Point. Then, select the "extra products" effect for the corresponding production facility.
+
+When items sprayed with the Proliferator are used as raw materials to produce next-level products, the power of the production facility will increase substantially, resulting in extra power consumption.

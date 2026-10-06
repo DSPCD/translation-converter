@@ -1,0 +1,11 @@
+﻿{$Text|fontsize=16;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,30}
+Signal Towers Guide
+{$Text|fontsize=14;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,20}
+A Signal Tower is a multi-functional complex that can provide you with more tactical options and optimize your production lines.
+{$Video|clip=Videos/tutorial-20-ld;size=420,180}
+{$Text|fontsize=14;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,20}
+Signal Towers periodically send signals of a specific frequency <color="#FD965ECC">to lure Dark Fog so it will attack the Signal Towers. </color>
+
+Signal Towers can form an effective data chain with <color="#FD965ECC">Missile Turrets</color> on the same planet, making them connect into the same signal network. By sharing all the data in the signal network, Missile Turrets can strike enemies trying to break into the signal network.
+
+<color="#FD965ECC">Signal Towers can also supply power as nodes of the Power Grid, and they even charge Icarus. </color>

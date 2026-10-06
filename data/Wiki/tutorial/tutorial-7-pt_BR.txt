@@ -1,0 +1,18 @@
+﻿{$Text|fontsize=16;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,30}
+Introdução ao Laboratório de Matrizes
+{$Text|fontsize=14;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,20}
+O Laboratório de Matrizes é um centro que conecta o mundo e o CentreBrain. Ele possui dois modos: "Modo Matriz" e "Modo Pesquisa".
+
+No Modo Matriz, o Laboratório produz matrizes.
+No Modo Pesquisa, o Laboratório pesquisa tecnologias consumindo as matrizes. Somente tecnologias desbloqueadas com matrizes podem ser pesquisadas.
+
+Quando o Modo Pesquisa está ativado, o Laboratório pesquisa automaticamente as tecnologias em andamento na Árvore de Tecnologias. Todos os laboratórios compartilham o mesmo progresso de pesquisa.
+
+<color="#FD965ECC">A velocidade de pesquisa pode ser aumentada significativamente usando vários laboratórios para pesquisar a mesma tecnologia simultaneamente!</color>
+Cada laboratório fornece uma velocidade básica de pesquisa de <color="#FD965ECC">60 Hashes/s</color>. Todos os materiais de matriz necessários para a tecnologia devem ser inseridos antes de iniciar a pesquisa.
+{$Video|clip=Videos/tutorial-7-ld;size=420,180}
+{$Text|fontsize=14;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,20}
+<color="#FD965ECC">Os Laboratórios de Matrizes podem ser construídos tanto na horizontal quanto na vertical no planeta.</color>
+Em Laboratórios de Matrizes construídos na vertical, quando matérias-primas suficientes são fornecidas ao laboratório do nível inferior, elas são transportadas automaticamente para o nível superior, enquanto os produtos são enviados ao primeiro nível. E você só precisa definir o modo de operação de um nível, que será sincronizado com os Laboratórios de Matrizes dos outros níveis.
+
+(As matrizes do mundo real podem ser usadas como códigos-fonte para que o CentreBrain mantenha a simulação da Pátria. Enviar matrizes ao CentreBrain e receber dele as tecnologias analisadas mantém a simulação da Pátria e impulsiona o desenvolvimento da Base.)

@@ -1,0 +1,16 @@
+﻿{$Text|fontsize=16;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,30}
+Instructions for Basic Controls
+{$Text|fontsize=14;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,20}
+Control the mecha using the [$LKEY_1;/$LKEY_2;/$LKEY_3;/$LKEY_4;] direction keys or give a move command to the mecha by clicking [$LKEY_5;] at a blank space.
+
+Press the [$LKEY_8;] key to make the mecha jump.
+
+The mecha will automatically switch to Drift Mode when it encounters water. It will consume more energy in the Drift Mode compared to moving on land.
+
+{$Video|clip=Videos/tutorial-11-ld;size=420,180}
+{$Text|fontsize=14;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,20}
+After unlocking "Drive Engine 1" and gaining the ability to fly, <color="#FD965ECC">press the [$LKEY_9;] key twice</color> to fly the mecha. Then make the mecha fly at low altitude using the [$LKEY_1;], [$LKEY_2;], [$LKEY_3;], and [$LKEY_4;] keys. In Flight Mode, the mecha's speed will be boosted by 150% and more energy will be consumed.
+
+During the flight, increase the flying altitude by pressing the <color="#FD965ECC">[$LKEY_10;]</color> key and reduce the flying altitude or land the mecha by pressing the <color="#FD965ECC">[$LKEY_13;]</color> key.
+
+After unlocking "Drive Engine 2" and gaining the ability to cruise, <color="#FD965ECC">press and hold the [$LKEY_1;] and [$LKEY_10;] keys</color> in Flight Mode to make the mecha continuously fly upward. After reaching a certain altitude, the mecha will enter Cruise Mode.

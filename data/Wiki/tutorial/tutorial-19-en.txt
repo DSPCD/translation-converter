@@ -1,0 +1,13 @@
+﻿{$Text|fontsize=16;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,30}
+Battlefield Analysis Bases
+{$Text|fontsize=14;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,20}
+A Battlefield Analysis Base acts as a control center during combat and supports Icarus in many ways.
+
+A Battlefield Analysis Base is equipped with a built-in construction module with 12 <color="#FD965ECC"> Construction Drones</color>. After the construction module has been activated, the base will automatically analyze the demand for construction and repair within its range, and in response it will send Construction Drones to construct or repair. You may set the priorities of the construction module. In Balanced Mode, Construction Drones will be evenly assigned to construction and repair tasks. You may also set it to <color="#61D8FFB0">"Prioritize Construction"</color> or <color=#7DFF6FB8>"Prioritize Repair"</color> to prioritize preferred tasks.
+{$Video|clip=Videos/tutorial-19-ld;size=420,180}
+{$Text|fontsize=14;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,20}
+Debris Analysis is another function of the Battlefield Analysis Base. When defeated, Dark Fog may drop rewards. If <color="#FD965ECC">"Auto Pickup"</color> is enabled, the base will automatically pick up all rewards and trash in its range. Alternatively, you may set a filter in the base's storage to control the items to be picked up. <color="#FD965ECC">A Large Depot can be built vertically above the Battlefield Analysis Base for more storage space</color>. If you have unlocked Logistics Distributors, you may continue building a Logistics Distributor vertically above the Large Depot.
+
+After <color="#FD965ECC">"Auto Reconstruction"</color> has been unlocked, the base can analyze the nearby remains of friendly buildings and mark them for reconstruction. As long as the corresponding items are stored in the base, the base will be able to send Construction Drones to reconstruct them.
+
+Battlefield Analysis Bases can also perform combat tasks. After <color="#FD965ECC">"Prototype"</color> has been unlocked, the Battlefield Analysis Base will be able to deploy a Squadron. This means when enemies approach, it will automatically send Ground Fighters to protect the base from enemies.

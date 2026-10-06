@@ -1,0 +1,16 @@
+﻿{$Text|fontsize=16;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,30}
+Guia básico de operação de Ícarus
+{$Text|fontsize=14;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,20}
+Controle o mecha usando as teclas de direção [$LKEY_1;/$LKEY_2;/$LKEY_3;/$LKEY_4;] ou dê um comando de movimento ao mecha clicando com [$LKEY_5;] em um espaço vazio.
+
+Pressione a tecla [$LKEY_8;] para fazer o mecha pular.
+
+O mecha mudará automaticamente para o Modo Planar ao encontrar água. Ele consome mais energia no Modo Planar do que ao se mover em terra.
+
+{$Video|clip=Videos/tutorial-11-ld;size=420,180}
+{$Text|fontsize=14;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,20}
+Após desbloquear o "Propulsor 1" e obter a capacidade de voar, <color="#FD965ECC">pressione a tecla [$LKEY_9;] duas vezes</color> para fazer o mecha voar. Depois, faça o mecha voar em baixa altitude usando as teclas [$LKEY_1;], [$LKEY_2;], [$LKEY_3;] e [$LKEY_4;]. No Modo de Voo, a velocidade do mecha aumenta em 150% e mais energia é consumida.
+
+Durante o voo, aumente a altitude pressionando a tecla <color="#FD965ECC">[$LKEY_10;]</color> e reduza a altitude ou pouse o mecha pressionando a tecla <color="#FD965ECC">[$LKEY_13;]</color>.
+
+Após desbloquear o "Propulsor 2" e obter a capacidade de navegar, <color="#FD965ECC">mantenha pressionadas as teclas [$LKEY_1;] e [$LKEY_10;]</color> no Modo de Voo para fazer o mecha subir continuamente. Ao atingir uma certa altitude, o mecha entrará no Modo de Cruzeiro.

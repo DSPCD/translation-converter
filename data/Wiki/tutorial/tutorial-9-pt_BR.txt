@@ -1,0 +1,13 @@
+﻿{$Text|fontsize=16;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,30}
+Esteira Transportadora e Transportador
+{$Text|fontsize=14;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,20}
+<color="#FD965ECC">Com a Esteira Transportadora e o Transportador, você pode alcançar a automação.</color>
+
+As instalações de produção têm portas variadas. Uma Mineradora, por exemplo, pode ser conectada diretamente a uma Esteira Transportadora. Outras, como a Fundição, precisam de um Transportador para conectar as instalações de fornecimento e recebimento de carga. Uma forma de transportar minérios de uma Mineradora até uma Fundição é usando Esteira Transportadora e Transportador. Os minérios são retirados da Mineradora pela Esteira Transportadora. Em seguida, a Esteira Transportadora é conectada à Fundição por meio do Transportador, que levará os minérios automaticamente à Fundição para serem fundidos.
+{$Video|clip=Videos/tutorial-9-ld;size=420,180}
+{$Text|fontsize=14;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,20}
+Para planejar a rota da Esteira Transportadora, você deve determinar um ponto de partida e um ponto final.
+
+Ao planejar a Esteira Transportadora, <color="#FD965ECC">você pode aumentar a altura do alvo em um nível pressionando [$LKEY_63;] e diminuí-la em um nível pressionando [$LKEY_64;]. Se precisar redefinir a altura do alvo para o nível do solo, pressione [$LKEY_65;].</color>
+
+A Esteira Transportadora normalmente se encaixa automaticamente nas construções conectáveis. <color="#FD965ECC">Mantenha [$LKEY_62;] pressionado para desativar o encaixe.</color>

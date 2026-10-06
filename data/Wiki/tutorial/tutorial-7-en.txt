@@ -1,0 +1,18 @@
+﻿{$Text|fontsize=16;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,30}
+Matrix Lab Introduction
+{$Text|fontsize=14;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,20}
+Matrix Lab is a hub that connects the world and the CentreBrain. It has two modes: "Matrix Mode" and "Research Mode".
+
+In Matrix Mode, the Lab produces matrices.
+In Research Mode, the Lab researches technologies by consuming the matrices. Only technologies that are unlocked with matrices can be researched.
+
+When Research Mode is on, the Lab will automatically research ongoing technologies in the Technology Tree. All labs share the same research progress.
+
+<color="#FD965ECC">Research speed can be significantly increased by utilizing multiple labs to research the same technology simultaneously!</color>
+Each lab will provide a basic research speed of <color="#FD965ECC">60 Hashes/s</color>. All required matrix materials for the technology must be put in before initiating a research.
+{$Video|clip=Videos/tutorial-7-ld;size=420,180}
+{$Text|fontsize=14;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,20}
+<color="#FD965ECC">Matrix Labs can be constructed both horizontally and vertically on the planet.</color>
+Regarding vertically built Matrix Labs, once enough raw materials are provided to the Lab at the lower level, it will automatically transport them to the upper level, while products will be sent to the first level. And you only need to set the working mode of one level, which will be synchronized with the Matrix Labs on the other levels.
+
+(The real-word matrices can be used as the source codes for the CentreBrain to maintain Homeland simulation. Uploading matrices to the CentreBrain and sending the parsed technologies back from the CentreBrain can maintain Homeland simulation and boost Homebase development.)

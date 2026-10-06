@@ -1,0 +1,20 @@
+﻿{$Text|fontsize=16;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,30}
+Power Grid Establishment Guide
+{$Text|fontsize=14;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,20}
+To activate the production facility, connect it to the Power Grid. This also requires power generation facilities to supply power.
+
+The facilities in the Power Grid include the <color="#FD965ECC">"power generation facilities"</color>, <color="#FD965ECC">"power consumption facilities"</color>, <color="#FD965ECC">"power storage facilities"</color>, and <color="#FD965ECC">"power transmission facilities"</color>.
+
+If the power generation of the Power Grid is higher than the power consumption, the power consumption facilities will run at max capacity. Surplus electrical energy will be stored in power storage facilities at a specific power level.
+If the power consumption of the Power Grid exceeds its power generation, the power storage facilities will discharge electricity at a certain output to fill the gap. If the power gap still can’t be filled even after all Accumulators have discharged electricity at maximum power, the running efficiency of the power consumption facilities will be lowered due to insufficient power.
+<color="#FD965ECC">When the sufficiency of the Power Grid is lower than 10%, the Power Grid will trip, and the production facilities will stop running.</color>
+{$Video|clip=Videos/tutorial-5-ld;size=420,180}
+{$Text|fontsize=14;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,20}
+Wind Turbines can be used to generate power in the early stage. Wind Turbines convert wind energy into electrical energy, making it a feasible power generation option for early-stage development as it does not require any fuel consumption. Also, the utilization rate of wind energy varies based on the planet.
+
+A Wind Turbine comes with a fixed power-supply coverage, which is very small. If you want to expand the power supply coverage, <color="#FD965ECC">use the Tesla Tower to transmit and supply power. </color>Different power transmission facilities have different connection lengths and supply coverage. Upgrading technologies will unlock more advanced power transmission facilities.
+
+Fuel-based power generation facilities consume fuel based on the actual consumption power.
+
+Clicking on the Tesla Tower allows you to access the power data of the current Power Grid and make any adjustments based on the power consumption demands.
+You can always display your Power Grid by enabling <color="#FD965ECC">"Power Grid"</color> in <color="#FD965ECC">"Detail Display ($LKEY_40;)"</color>.

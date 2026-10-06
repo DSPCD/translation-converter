@@ -1,0 +1,43 @@
+﻿{$Text|fontsize=16;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,30}
+Guia do Modo criativo
+{$Text|fontsize=14;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,20}
+No Modo criativo, algumas ferramentas práticas podem libertá-lo de restrições e liberar sua criatividade, permitindo que você viaje e explore o universo.
+
+{$Video|clip=Videos/tutorial-15-ld;size=420,180}
+{$Text|fontsize=14;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,20}
+Clique no ícone <color="#FD965EB0">∞</color> à direita da "barra de energia do núcleo" do mecha para travar a energia do núcleo do mecha.
+
+Clique no botão "Desbloquear tudo" na <color="#FD965EB0">Árvore de Tecnologias</color> para desbloquear imediatamente a maioria das tecnologias. Ou clique no botão "Desbloquear diretamente (Modo Criativo)" exibido em qualquer aba de tecnologia para desbloquear essa tecnologia.
+
+Ative a função "Item Grátis" no <color="#FD965EB0">Replicador</color> para produzir o item sem nenhuma matéria-prima.
+Depois de ativar a função "Por Grupo", a quantidade de itens necessária aumentará ou diminuirá "por grupo".
+Clique em "Obter itens comuns" para obter um grupo de cada item comum.
+Clique em "Remover itens do Inventário" para remover todos os itens do Inventário.
+
+As <color="#FD965EB0">Ferramentas do Modo Criativo (6)</color> habilitam a Construção Rápida. Com a Construção Rápida ativada, os Drones de Construção não são necessários para as construções.
+<color="#FD965EBB">Para evitar problemas de desempenho do jogo causados pela construção de muitas instalações de uma só vez, você pode especificar manualmente o número de instalações construídas por quadro lógico.</color>
+
+Na <color="#FD965EB0">Visão do Planeta</color>, você pode clicar e manter pressionado [R MOUSE] para viajar rapidamente a qualquer posição alvo do planeta atual.
+No <color="#FD965EB0">Mapa estelar</color>, selecione um planeta alvo para viajar rapidamente até ele ou clique e mantenha pressionado [R MOUSE] para viajar rapidamente a qualquer lugar do sistema planetário.
+
+Nas <color="#FD965EB0">Ferramentas do Modo Criativo</color>, você pode personalizar os locais e as reservas dos depósitos. Clique com <color="#FD965EB0">[L MOUSE]</color> para gerar um depósito em terra e pressione a tecla <color="#FD965EB0">[$LKEY_55;]</color> para girá-lo.
+Com "Plantar Vegetação", clique com <color="#FD965EB0">[L MOUSE]</color> para plantar vegetação local ou de outros tipos em terra.
+Você pode remover vegetação e depósitos do solo com a função "Remover Vegetação/Depósitos".
+
+Você pode gerar ou consumir cargas diretamente na Esteira Transportadora usando o <color="#FD965EB0">Medidor de Fluxo</color>. O "Filtro de Carga", o ciclo de monitoramento e o fluxo alvo devem ser configurados para ajustar a velocidade de geração/consumo de carga.
+Por exemplo, quando Cristal Óptico é selecionado no "Filtro de Carga", selecione "Gerar carga", defina o ciclo de monitoramento em um segundo e o fluxo alvo em 60. Então o Medidor de Fluxo gerará Cristal Óptico na Esteira Transportadora a uma taxa de 60/s.
+
+No <color="#FD965EB0">Painel da Esfera de Dyson</color>, a função "Construção Rápida Automática" pode ser ativada. Depois de ativada, o Enxame de Dyson ou a Esfera de Dyson planejados anteriormente serão construídos automaticamente, sem ejetar Velas Solares nem lançar Foguetes de Transporte Pequenos. Você pode ativar a "Vida Infinita das Velas Solares" clicando no ícone, para que as Velas Solares tenham vida útil infinita. <color="#FD965EB0">Esta configuração não pode ser desfeita, a menos que essas Velas Solares sejam removidas manualmente.</color>
+
+Ao navegar pelo espaço, segure <color="#FD965EB0">Velas Solares</color> e clique com <color="#FD965EB0">[L MOUSE]</color> para construir manualmente o Enxame de Dyson.
+
+Você pode ativar "Velocidade de Ejeção/Lançamento 10×" nos painéis do <color="#FD965EB0">Trilho Ejetor EM</color> e do <color="#FD965EB0">Silo Vertical</color>.
+
+Você pode ativar "Geração de Energia 100×" no painel da <color="#FD965EB0">Estrela Artificial</color>. A Estrela Artificial gerará energia a 100× a produção básica de geração.
+
+Você pode travar a quantidade de qualquer item clicando na insígnia de cadeado no canto superior direito do ícone de carga no painel da <color="#FD965EB0">Estação Logística</color>.
+
+Você pode obter pilhas de solo infinitas clicando na insígnia <color="#FD965EB0">∞</color> no canto inferior direito do ícone de pilha de solo em <color="#FD965EB0">Modificação Ambiental (9)</color>.
+
+Você pode colocar Fundações em todo o planeta clicando em "Reformar Completamente o Planeta".
+Restaure todos os terrenos e a vegetação deste planeta ao estado inicial clicando em "Restaurar todos os terrenos".

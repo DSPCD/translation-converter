@@ -1,0 +1,18 @@
+﻿{$Text|fontsize=16;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,30}
+Planetary Shields Guide
+{$Text|fontsize=14;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,20}
+A Planetary Shield is an effective measure of countering deep space threats. <color="#FD965ECC">To hold up a Planetary Shield, you must first build a Planetary Shield Generator. </color>
+A Planetary Shield Generator has an 8.64GJ energy reservoir inside it. Activating and maintaining the Planetary Shield Generator will use the energy stored in this energy reservoir.
+It takes time for a newly-built Planetary Shield Generator to charge, it will be <color="#FD965ECC">activated</color> as soon as the energy stored inside reaches 1.44GJ. Once activated, the Planetary Shield will continue to be charged to enhance the support force and to expand. When the energy stored reaches 2.88GJ and the support force reaches 100%, the Planetary Shield will completely unfurl and will have the widest coverage. A Planetary Shield Generator will continue to charge excess energy into its energy reservoir. If power supply is halted, the Planetary Shield Generator will consume the energy stored in the energy reservoir to maintain the Planetary Shield. If there is not enough energy in the reservoir, the Planetary Shield will shrink until it collapses.
+{$Video|clip=Videos/tutorial-21-ld;size=420,180}
+{$Text|fontsize=14;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,20}
+A Planetary Shield Generator can maintain a Planetary Shield covering <color="#FD965ECC">4%</color> of the planet at maximum. If you want to expand the coverage of the Planetary Shield, you need to build more Planetary Shield Generators. A maximum of <color="#FD965ECC">80</color> Planetary Shield Generators can be built on a planet.
+
+A Planetary Shield consumes energy not only to maintain the support force, but also to defend. A Planetary Shield is charged directly using the excess energy in the Power Grid. The <color="#FD965ECC">charge rate depends on the ratio of the surplus power in the grid to the energy reservoir of that Planetary Shield. </color>While the energy reservoir is less than 2/3, the Planetary Shield will charge with all surplus power. If the energy reservoir is more than 2/3, the higher energy reservoir comes with the lower charging power.
+
+The capacity of the energy reservoir of a Planetary Shield is related to the fill ratio, and the <color="#FD965ECC">capacity of the energy reservoir of a Planetary Shield with a fill ratio of 100% is 1.2TJ.
+</color>A Planetary Shield consumes energy stored in its energy reservoir to defend against damage from space, and it takes <color="#FD965ECC">200kJ</color> of energy to defend against 1 damage, so a Planetary Shield with an energy reservoir of 1.2TJ can defend against <color="#FD965ECC">6,000,000</color> damage. You can upgrade its efficiency in the Technology Tree. If a Planetary Shield gets pierced, it will take time to restart.
+
+<color="#FD965ECC">Planetary Shield can only shield damage from space.</color>
+
+If the shield is depleted, it takes time to reactivate.

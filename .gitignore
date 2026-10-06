@@ -1,6 +1,12 @@
-.vscode/**
-.js/**
-.history/js/
-lh/**
-./.lh/
+.vscode/
+.history/
+.lh/
 old.*
+.js/
+.env
+
+release/
+tools/
+how-to-update.md
+tools/TUTORIAL_EXTRACTION_GUIDE.md
+files/

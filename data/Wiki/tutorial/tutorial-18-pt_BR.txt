@@ -1,0 +1,12 @@
+﻿{$Text|fontsize=16;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,30}
+Guia das torretas
+{$Text|fontsize=14;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,20}
+Para combater a ameaça da Névoa Escura, a COSMO desenvolveu um conjunto completo de sistemas de defesa para os engenheiros. Entre esses sistemas, as Torretas são as mais importantes.
+<color="#FD965ECC">Uma Torreta geralmente ataca inimigos dentro de seu alcance de ataque. Os ataques da Torreta consomem munição e energia. </color>
+
+Para facilitar o trabalho de construção dos engenheiros, a COSMO projetou as Torretas com ideias sutis. Você pode arrastar para construir todos os tipos de Torretas. Todas as Torretas que usam munição têm uma porta de alimentação. Você pode usar uma <color="#FD965ECC">Esteira Transportadora</color> para alimentar a munição. Além disso, você pode construir Torretas diretamente sobre Esteiras Transportadoras ou usar Esteiras Transportadoras para ligar Torretas entre si.
+{$Video|clip=Videos/tutorial-18-ld;size=420,180}
+{$Text|fontsize=14;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,20}
+Torretas diferentes usam tipos de munição diferentes, e o dano causado pela munição pode ser aumentado desbloqueando tecnologias na Árvore de Tecnologias.
+
+Em combates extremos, as Torretas têm uma habilidade excepcionalmente poderosa: a <color="#61D8FFB0">Supernova</color>. Clique em uma Torreta para abrir o Painel de Informações, e o botão "Supernova" estará no painel. Clique nele para ativar a Supernova. Depois de ativar a Supernova, a Torreta começará a carregar e entrará no Modo Rajada, disparando com extrema rapidez. Porém, a Supernova consome uma enorme quantidade de energia, então é uma boa ideia usar o Acumulador para equilibrar as flutuações da rede. Existem vários modos de Supernova. No modo <color="#FD965ECC">"Rajada Única"</color>, apenas a Torreta selecionada ativa a Supernova; no modo <color="#FD965ECC">"Rajada Planetária"</color>, todas as Torretas do planeta ativam a Supernova; no modo <color="#FD965ECC">"Rajada em Grupo"</color>, todas as Torretas do mesmo grupo ativam a Supernova, desde que você tenha classificado suas Torretas em grupos diferentes. Para isso, clique no botão do canto superior direito do Painel de Informações de uma Torreta.

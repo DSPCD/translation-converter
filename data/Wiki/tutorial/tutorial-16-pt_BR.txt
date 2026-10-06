@@ -1,0 +1,23 @@
+﻿{$Text|fontsize=16;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,30}
+Guia do Sistema Logístico de Distribuição
+{$Text|fontsize=14;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,20}
+O Ícarus pode coletar itens com facilidade usando o Distribuidor Logístico. <color="#61D8FFB0">Instale o Distribuidor Logístico sobre um Depósito</color> e implante Robôs Logísticos; assim, ele distribuirá os itens para o Ícarus ou para outros Distribuidores Logísticos deste planeta.
+
+Para ativar a função Enviar para Ícarus:
+1. Configure o Distribuidor Logístico
+Abra o Distribuidor Logístico, configure os itens para distribuição (por exemplo, lingotes de ferro) e marque <color="#FFFFFF80">[Enviar para Ícarus]</color> (esta opção vem marcada por padrão). Implante Robôs Logísticos e confirme que os lingotes de ferro estão armazenados no Depósito.
+2. Configure a Lista Logística
+Pressione [$LKEY_34;] para abrir o Inventário, clique na Lista Logística à esquerda e selecione lingote de ferro. Deslize a parte esquerda do controle para definir a demanda <color="#61D8FFB0">mínima</color>. Se a quantidade de lingotes de ferro no Inventário for menor que o mínimo, o Distribuidor Logístico enviará automaticamente o Robô Logístico para <color="#61D8FFB0">reabastecer</color>. Deslize a parte direita do controle para definir a demanda <color="#FD965EB0">máxima</color>. Se a quantidade de lingotes de ferro no Inventário for maior que o máximo, o Distribuidor Logístico coletará o <color="#FD965EB0">excedente</color>.
+{$Video|clip=Videos/tutorial-16-ld;size=420,180}
+{$Text|fontsize=14;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,20}
+O Distribuidor Logístico só pode distribuir itens para o Ícarus ou coletar itens dele. Basta alternar o modo de distribuição para [<color="#61D8FFB0">Enviar para Ícarus</color>] ou [<color="#FD965EB0">Coletar de Ícarus</color>]. Se [<color="#FD965EB0">Coletar todos os tipos</color>] estiver marcado, todos os itens que precisam ser coletados do Ícarus serão coletados pelo Distribuidor Logístico. Ele também deixará de distribuir itens para outros Distribuidores Logísticos.
+
+Os Distribuidores Logísticos podem distribuir itens entre si. [<color="#FFFFFF80">Distribuir para outros distribuidores</color>] deve estar marcado em ambos os Distribuidores Logísticos, com seus filtros definidos para o mesmo item. Em seguida, alterne o Distribuidor Logístico A para [<color="#61D8FFB0">Distribuir para outros distribuidores</color>] e o Distribuidor Logístico B para [<color="#FD965EB0">"Solicitar de outros distribuidores"</color>]. O Distribuidor Logístico A distribuirá automaticamente itens para o Distribuidor Logístico B, e vice-versa.
+
+Se nenhum filtro estiver configurado em um Distribuidor Logístico, clique em [<color="#61D8FFB0">Filtro Intuitivo</color>] para configurar um automaticamente.
+
+O Filtro Intuitivo verifica primeiro os itens do Depósito. <color="#FD965EB0">Se houver apenas um tipo de item no Depósito</color>, o Filtro Intuitivo definirá o filtro para esse item.
+Se não houver itens no Depósito, o Filtro Intuitivo verificará os <color="#FD965EB0">itens de entrada</color>. Por exemplo, o Depósito está conectado a três Transportadores com filtros definidos para o mesmo item. O Filtro Intuitivo então definirá o filtro do Distribuidor Logístico para esse item.
+Quando o Depósito não tem itens e não há itens de entrada, marque um <color="#FD965EB0">único ícone</color> na Esteira Transportadora conectada ao Depósito, e o Filtro Intuitivo ajustará o filtro para corresponder a esse ícone.
+
+Quando os itens trazidos de volta pelo Robô Logístico não puderem ser armazenados no Depósito, eles ficarão temporariamente <color="#FF5D4CB0">armazenados</color> no Distribuidor Logístico. Os itens excedentes serão transferidos automaticamente para o espaço restante no Depósito, ou você pode retirá-los manualmente.

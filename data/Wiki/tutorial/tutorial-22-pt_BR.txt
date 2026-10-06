@@ -1,0 +1,14 @@
+﻿{$Text|fontsize=16;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,30}
+Drones e frotas de combate
+{$Text|fontsize=14;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,20}
+Os Drones de Combate são uma parte importante do Sistema de Defesa do Ícarus. Eles podem atacar junto com o Ícarus.
+
+Depois que o <color="#FD965ECC">"Protótipo"</color> for desbloqueado, o Ícarus poderá comandar Esquadrões. <color="#FD965ECC">Há um Hangar dentro do Ícarus. </color>Um Hangar pode conter quatro grupos de Drones de Combate. Os Drones de Combate devem ser implantados em uma Frota antes de poderem operar. Clique com o botão esquerdo em um espaço da Frota para implantar um Drone de Combate em cada espaço, ou clique no <color="#FD965ECC">botão Configurações</color> à direita da Frota para configurar todos os Drones de Combate da Frota.
+Clique no botão Reabastecimento Automático à esquerda de uma Frota para ativar o <color="#FD965ECC">"Reabastecimento Automático"</color>. Depois de ativado, qualquer Drone de Combate destruído na Frota será reposto a partir do Hangar.
+
+Se Caças Terrestres forem implantados, as Frotas atacarão automaticamente todos os inimigos dentro do seu alcance. Depois de eliminar todos os inimigos próximos, as Frotas retornarão automaticamente. Se quiser comandar as Frotas e dar instruções manualmente, pressione [$LKEY_92;] para entrar na Interface de Combate e ativar o Modo de Comando de cada Frota.
+{$Video|clip=Videos/tutorial-22-ld;size=420,180}
+{$Text|fontsize=14;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,20}
+No início, o Ícarus só pode comandar um Esquadrão Terrestre, com no máximo quatro Caças Terrestres. <color="#FD965ECC">Você pode aprimorar a tecnologia para aumentar o número de Esquadrões e suas capacidades. </color>
+Os Esquadrões Terrestres podem auxiliar o Ícarus em combate na superfície de um planeta. Depois que a <color="#FD965ECC">"Corvete"</color> for desbloqueada, Frotas Espaciais poderão ser implantadas.
+Naves de guerra das Frotas Espaciais podem ser comandadas para auxiliar o Ícarus em combates espaciais.

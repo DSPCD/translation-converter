@@ -1,0 +1,17 @@
+﻿{$Text|fontsize=16;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,30}
+Instructions for Cruise Controls
+{$Text|fontsize=14;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,20}
+In Cruise Mode:
+
+The mouse is locked by default. Unlock it by pressing the <color="#FD965ECC">[$LKEY_23;]</color> key.
+Align the mecha's cruising direction with the camera's orientation by pressing and holding the [$LKEY_1;].
+Speed up or slow down the mecha by <color="#FD965ECC">pressing and holding the [$LKEY_22;] or [$LKEY_2;], respectively.</color>
+Make your mecha fly sideways to the left or right by pressing [$LKEY_16;] or [$LKEY_19;]. Hold [$LKEY_49;] and drag to rotate the camera sideways.
+
+In Cruise Mode, control the mecha to different planets or planetary systems by following the arrows in Space Navigation.
+{$Video|clip=Videos/tutorial-12-ld;size=420,180}
+{$Text|fontsize=14;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,20}
+After unlocking "Drive Engine 4", the mecha can warp. This allows fast intergalactic travels.
+To take a warp flight, sufficient energy and "Space Warpers" must be prepared.
+
+Space Warper is a necessary consumable for a mecha's warp flight. When your mecha escapes from the gravitational field of a planet, enable or disable warp flight by pressing <color="#FD965ECC">[$LKEY_24;]</color>. The activation of warp flight consumes not only a large amount of energy but also 1x <color="#FD965ECC">Space Warper</color>.

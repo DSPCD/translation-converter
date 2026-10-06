@@ -1,0 +1,11 @@
+﻿{$Text|fontsize=16;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,30}
+Guia das Torres de Sinal
+{$Text|fontsize=14;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,20}
+A Torre de Sinal é um complexo multifuncional que pode oferecer mais opções táticas e otimizar suas linhas de produção.
+{$Video|clip=Videos/tutorial-20-ld;size=420,180}
+{$Text|fontsize=14;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,20}
+As Torres de Sinal enviam periodicamente sinais de uma frequência específica <color="#FD965ECC">para atrair a Névoa Escura, fazendo-a atacar as Torres de Sinal. </color>
+
+As Torres de Sinal podem formar uma cadeia de dados eficaz com as <color="#FD965ECC">Torretas de Mísseis</color> do mesmo planeta, conectando-as à mesma rede de sinal. Ao compartilhar todos os dados da rede de sinal, as Torretas de Mísseis podem atacar inimigos que tentam invadir a rede de sinal.
+
+<color="#FD965ECC">As Torres de Sinal também podem fornecer energia como nós da Rede Elétrica e até carregam o Ícarus. </color>

@@ -1,0 +1,18 @@
+﻿{$Text|fontsize=16;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,30}
+Guia dos escudos planetários
+{$Text|fontsize=14;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,20}
+O Escudo Planetário é uma medida eficaz contra as ameaças do espaço profundo. <color="#FD965ECC">Para erguer um Escudo Planetário, você deve primeiro construir um Gerador de Escudo Planetário. </color>
+Um Gerador de Escudo Planetário tem em seu interior um reservatório de energia de 8,64GJ. Ativar e manter o Gerador de Escudo Planetário usará a energia armazenada nesse reservatório.
+Um Gerador de Escudo Planetário recém-construído leva tempo para carregar e será <color="#FD965ECC">ativado</color> assim que a energia armazenada atingir 1,44GJ. Depois de ativado, o Escudo Planetário continuará sendo carregado para reforçar a força de sustentação e se expandir. Quando a energia armazenada chega a 2,88GJ e a força de sustentação chega a 100%, o Escudo Planetário se desdobra por completo e tem a maior cobertura. Um Gerador de Escudo Planetário continuará carregando o excesso de energia em seu reservatório. Se o fornecimento de energia for interrompido, o Gerador de Escudo Planetário consumirá a energia armazenada no reservatório para manter o Escudo Planetário. Se não houver energia suficiente no reservatório, o Escudo Planetário encolherá até entrar em colapso.
+{$Video|clip=Videos/tutorial-21-ld;size=420,180}
+{$Text|fontsize=14;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,20}
+Um Gerador de Escudo Planetário pode manter um Escudo Planetário cobrindo no máximo <color="#FD965ECC">4%</color> do planeta. Se quiser ampliar a cobertura do Escudo Planetário, você precisa construir mais Geradores de Escudo Planetário. Um máximo de <color="#FD965ECC">80</color> Geradores de Escudo Planetário pode ser construído em um planeta.
+
+Um Escudo Planetário consome energia não só para manter a força de sustentação, mas também para defender. Um Escudo Planetário é carregado diretamente com o excesso de energia da Rede Elétrica. A <color="#FD965ECC">taxa de carga depende da proporção entre a energia excedente na rede e o reservatório de energia desse Escudo Planetário. </color>Enquanto o reservatório de energia estiver abaixo de 2/3, o Escudo Planetário carregará com toda a energia excedente. Se o reservatório estiver acima de 2/3, quanto maior o reservatório, menor a potência de carga.
+
+A capacidade do reservatório de energia de um Escudo Planetário está relacionada à proporção de preenchimento, e a <color="#FD965ECC">capacidade do reservatório de energia de um Escudo Planetário com proporção de preenchimento de 100% é de 1,2TJ.
+</color>Um Escudo Planetário consome a energia armazenada em seu reservatório para se defender de danos vindos do espaço, e são necessários <color="#FD965ECC">200kJ</color> de energia para defender 1 de dano, de modo que um Escudo Planetário com reservatório de 1,2TJ pode defender <color="#FD965ECC">6.000.000</color> de dano. Você pode aprimorar sua eficiência na Árvore de Tecnologias. Se um Escudo Planetário for perfurado, será necessário tempo para reiniciá-lo.
+
+<color="#FD965ECC">O Escudo Planetário só pode bloquear danos vindos do espaço.</color>
+
+Se o escudo se esgotar, será necessário tempo para reativá-lo.

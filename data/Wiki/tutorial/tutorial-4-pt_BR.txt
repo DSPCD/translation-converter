@@ -1,0 +1,14 @@
+﻿{$Text|fontsize=16;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,30}
+Construção da mineradora e alcance dos depósitos
+{$Text|fontsize=14;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,20}
+A Mineradora coleta minérios automaticamente. Pressione a tecla <color="#FD965ECC">[$LKEY_55;]</color> para girar a Mineradora em <color="#FD965ECC">90°</color> para que sua área em setor cubra os depósitos.
+Durante a construção, mantenha pressionada a tecla <color="#FD965ECC">[$LKEY_61;]</color> para desativar o encaixe na grade de construção. Isso permite ajustar melhor a posição e a rotação da Mineradora para cobrir mais depósitos.
+{$Video|clip=Videos/tutorial-4-ld;size=420,180}
+{$Text|fontsize=14;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,20}
+Quanto mais depósitos a Mineradora cobre, mais rápido ela extrai. Cada depósito coberto fornece uma produção básica de <color="#FD965ECC">30/min</color>. A mineração causa perda de recursos nos depósitos cobertos um a um, de modo que a taxa de perda em cada depósito é a mesma. Quando um dos depósitos cobertos se esgota, a produção da Mineradora diminui.
+
+Cobrir mais depósitos não resulta necessariamente em maior produção. A quantidade de depósitos a cobrir depende do equilíbrio entre produção e perda de recursos.
+
+Um depósito pode ser coberto por várias Mineradoras, o que resulta em uma taxa de perda mais rápida.
+
+Para aumentar a velocidade de mineração da Mineradora e reduzir a perda do depósito durante a mineração, você pode aprimorar continuamente o nível de <color="#FD965ECC">"Utilização de recursos"</color> na aba <color="#FD965ECC">"Aprimorar"</color> da <color="#FD965ECC">"Árvore de Tecnologias ($LKEY_39;)"</color>.

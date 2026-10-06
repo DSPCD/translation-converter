@@ -1,0 +1,14 @@
+﻿{$Text|fontsize=16;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,30}
+Combat Drones and Fleets
+{$Text|fontsize=14;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,20}
+Combat Drones are important part of the Icarus Defense System. They can launch attack together with Icarus.
+
+After <color="#FD965ECC">"Prototype"</color> is unlocked, Icarus will be able to command Squadrons. <color="#FD965ECC">There is a Hangar inside Icarus. </color>A Hangar can contain four groups of Combat Drones. Combat Drones must be deployed into a Fleet before they can operate. Left click on a slot in a Fleet to deploy a Combat Drone to each slot, or click on the <color="#FD965ECC">Settings button</color> to the right of the Fleet to set up all Combat Drones of the Fleet.
+Click on the Auto Replenish button to the left of a Fleet to enable <color="#FD965ECC">"Auto Replenish"</color>. Once enabled, any destroyed Combat Drone in the Fleet will be replenished from the Hangar.
+
+If Ground Fighters are deployed, Fleets will automatically attack and strike all enemies within their range. After eliminating all enemies nearby, the Fleets will automatically return. If you want to command Fleets and manually give them instructions, press [$LKEY_92;] to enter the Combat Interface to enable the Command Mode of each Fleet.
+{$Video|clip=Videos/tutorial-22-ld;size=420,180}
+{$Text|fontsize=14;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,20}
+In the beginning, Icarus can only command one Ground Squadron, it only has a maximum of four Ground Fighters. <color="#FD965ECC">You can upgrade technology to increase the number of Squadrons and their capacities. </color>
+Ground Squadrons can assist Icarus in combat on the surface of a planet. After <color="#FD965ECC">"Corvette"</color> is unlocked, Space Fleets can be deployed.
+Warships in Space Fleets can be commanded to assist Icarus in space combat.

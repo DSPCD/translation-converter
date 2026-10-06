@@ -1,0 +1,12 @@
+﻿{$Text|fontsize=16;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,30}
+Guide to Turrets
+{$Text|fontsize=14;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,20}
+To counter the threat of Dark Fog, COSMO has developed an entire set of defense systems for engineers. Among these systems the Turrets are the most important.
+<color="#FD965ECC">A Turret usually strikes enemies within its attack range. Turret attacks use up both ammo and energy. </color>
+
+To facilitate engineers' construction efforts, COSMO designed Turrets with subtle ideas. You can drag and build all kinds of Turrets. All Turrets that use ammo have a feeding port. You can use a <color="#FD965ECC">Conveyor Belt</color> to feed ammo in. Additionally, you can either directly build Turrets on Conveyor Belts or use Conveyor Belts to string Turrets together.
+{$Video|clip=Videos/tutorial-18-ld;size=420,180}
+{$Text|fontsize=14;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,20}
+Different Turrets use different types of ammo, and the damage inflicted by ammo can be increased by unlocking technologies in the Technology Tree.
+
+In extreme combat, Turrets have an exceptionally powerful ability: The <color="#61D8FFB0">Supernova</color>. Click on a Turret to open the Information Panel, and the "Supernova" button will be on the panel. Click on it to activate Supernova. After activating Supernova, the Turret will start to charge and will enter Burst Mode and fire extremely quickly. However, Supernova consumes a huge amount of energy, so it is a good idea to use the Accumulator to balance out grid fluctuations. There are several Supernova modes. In <color="#FD965ECC">"Single Burst"</color> mode, only the selected Turret activates Supernova; in <color="#FD965ECC">"Planet Burst"</color> mode, all Turrets on the planet activate Supernova; in <color="#FD965ECC">"Group Burst"</color> mode, all Turrets in the same group activate Supernova as long as you have classified your Turrets by different groups. To do this, click on the upper right button on a Turret's Information Panel. 

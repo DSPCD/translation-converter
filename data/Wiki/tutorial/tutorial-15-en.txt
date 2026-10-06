@@ -1,0 +1,43 @@
+﻿{$Text|fontsize=16;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,30}
+Sandbox Mode Guide
+{$Text|fontsize=14;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,20}
+In Sandbox Mode, some practical tools can free you from restrictions and unleash your creativity, allowing you to travel around and explore the universe.
+
+{$Video|clip=Videos/tutorial-15-ld;size=420,180}
+{$Text|fontsize=14;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,20}
+Click the <color="#FD965EB0">∞</color> icon on the right of the mecha's "core energy bar" to lock the mecha's core energy.
+
+Click the "Unlock All" button in the <color="#FD965EB0">Technology Tree</color> to immediately unlock most of the technologies. Or, you can click on the "Unlock Directly (Sandbox)" button displayed on any technology tab to unlock this technology.
+
+Enable the "Free Item" feature in <color="#FD965EB0">Replicator</color> to produce this item without any raw materials.
+After enabling the "By Group" feature, the number of items required will increase or decrease "by a group".
+Click "Obtain Common Items" to gain a group of each common item.
+Click "Empty Inventory" to remove all items in the Inventory.
+
+The <color="#FD965EB0">Sandbox Mode Tools (6)</color> enable Fast Build. After Fast Build is enabled, Construction Drones are not required for buildings.
+<color="#FD965EBB">To prevent game performance issues caused by building a large number of facilities at once, you have the option to manually specify the number of facilities built per logic frame.</color>
+
+In <color="#FD965EB0">Planet View</color>, you can click and hold [R MOUSE] to fast travel to any target position on the current planet.
+In <color="#FD965EB0">Starmap</color>, select a target planet to fast travel there or click and hold [R MOUSE] to fast travel anywhere in the planetary system.
+
+In <color="#FD965EB0">Sandbox Tools</color>, you can customize the locations and vein reserves. Click <color="#FD965EB0">[L MOUSE]</color> to generate a vein on land and press the <color="#FD965EB0">[$LKEY_55;]</color> key to rotate the vein.
+With "Plant Vegetation", click <color="#FD965EB0">[L MOUSE]</color> to plant local vegetation or other types of vegetation on land.
+You can remove vegetation and veins from land with the "Remove Vegetation/Veins" feature.
+
+You can directly generate or consume cargo on the Conveyor Belt using the <color="#FD965EB0">Flow Meter</color>. The "Cargo Filter", monitoring cycle and target flow must be configured to adjust the cargo generation/consumption speed.
+For example, when Grating Crystal is selected for the "Cargo Filter", select "Generate cargo", and set the monitoring cycle at one second and the target flow at 60. Then the Flow Meter will generate Grating Crystal to the Conveyor Belt at a rate of 60/s.
+
+In the <color="#FD965EB0">Dyson Sphere Panel</color>, the "Auto Fast Build" feature can be enabled. Once enabled, the previously planned Dyson Swarm or Dyson Sphere will be automatically built, without ejecting Solar Sails or launching Small Carrier Rockets. You can enable the "Infinite Solar Sail Life" by clicking the icon so that the Solar Sails have infinite life. <color="#FD965EB0">This setting can’t be undone unless such Solar Sails were manually removed.</color>
+
+When navigating the space, hold <color="#FD965EB0">Solar Sails</color> and click <color="#FD965EB0">[L MOUSE]</color> to manually build Dyson Swarm.
+
+You can enable "10× Ejection/Launch Speed" on the <color="#FD965EB0">EM-Rail Ejector</color> and <color="#FD965EB0">Vertical Silo</color> panels.
+
+You can enable "100× Power Generation" on the <color="#FD965EB0">Artificial Star</color> panel. The Artificial Star will generate power at 100× basic generation output.
+
+You can lock the number of any items by clicking the lock badge on the upper right corner of the cargo icon on the <color="#FD965EB0">Logistics Station</color> panel.
+
+You can obtain infinite soil piles by clicking the <color="#FD965EB0">∞</color> badge on the lower right corner of the soil pile icon in <color="#FD965EB0">Environmental Modification (9)</color>.
+
+You can lay Foundations across the entire planet by clicking "Lay Foundations Across Planet".
+Restore all terrains and vegetation on this planet to their initial states by clicking "Restore All Terrains".

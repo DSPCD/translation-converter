@@ -1,0 +1,13 @@
+﻿{$Text|fontsize=16;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,30}
+Bases de análise do campo de batalha
+{$Text|fontsize=14;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,20}
+Uma Base de Análise de Campo de Batalha atua como centro de controle durante o combate e auxilia o Ícarus de várias maneiras.
+
+Uma Base de Análise de Campo de Batalha é equipada com um módulo de construção integrado com 12 <color="#FD965ECC"> Drones de Construção</color>. Depois que o módulo de construção é ativado, a base analisa automaticamente a demanda de construção e reparo dentro do seu alcance e, em resposta, envia Drones de Construção para construir ou reparar. Você pode definir as prioridades do módulo de construção. No Modo Equilibrado, os Drones de Construção são distribuídos igualmente entre as tarefas de construção e reparo. Você também pode configurá-lo para <color="#61D8FFB0">"Priorizar Construção"</color> ou <color=#7DFF6FB8>"Priorizar Reparo"</color> para dar preferência às tarefas desejadas.
+{$Video|clip=Videos/tutorial-19-ld;size=420,180}
+{$Text|fontsize=14;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,20}
+A Análise de Destroços é outra função da Base de Análise de Campo de Batalha. Quando derrotada, a Névoa Escura pode largar recompensas. Se <color="#FD965ECC">"Coleta Automática"</color> estiver ativada, a base coletará automaticamente todas as recompensas e lixo dentro do seu alcance. Como alternativa, você pode definir um filtro no armazenamento da base para controlar os itens a serem coletados. <color="#FD965ECC">Um Depósito Grande pode ser construído na vertical acima da Base de Análise de Campo de Batalha para mais espaço de armazenamento</color>. Se você já desbloqueou os Distribuidores Logísticos, pode continuar construindo um Distribuidor Logístico na vertical acima do Depósito Grande.
+
+Depois que a <color="#FD965ECC">"Reconstrução Automática"</color> for desbloqueada, a base poderá analisar os restos de construções aliadas próximas e marcá-los para reconstrução. Desde que os itens correspondentes estejam armazenados na base, ela poderá enviar Drones de Construção para reconstruí-los.
+
+As Bases de Análise de Campo de Batalha também podem executar tarefas de combate. Depois que o <color="#FD965ECC">"Protótipo"</color> for desbloqueado, a Base de Análise de Campo de Batalha poderá implantar um Esquadrão. Isso significa que, quando inimigos se aproximarem, ela enviará automaticamente Caças Terrestres para proteger a base dos inimigos.

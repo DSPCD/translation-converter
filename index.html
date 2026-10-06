@@ -1,90 +1,121 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <title>DSP Translation Converter</title>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <meta name="author" content="">
-  <meta name="description" content="">
-  <meta name="keywords" content="">
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/base16/dracula.min.css">
-  <link rel="stylesheet" href="./css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Convert a Dyson Sphere Program translation downloaded from Crowdin into the game's Locale files.">
+  <link rel="icon" href="./src/assets/dsp.png">
+  <link rel="stylesheet" href="./src/css/style.css">
 </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TDNLFWC28N"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-TDNLFWC28N');
-</script>
-
-<body onload="initLocales()">
+<body>
   <main>
     <header>
-      <span class="title">Dyson Sphere Program Translation Converter</span>
-      <span id="game-version"></span>
-      <span id="last-update"></span>
+      <div class="header-inner">
+        <h1 class="title" data-i18n="title">Dyson Sphere Program Translation Converter</h1>
+        <span id="game-version"></span>
+        <span id="last-update"></span>
+        <select id="ui-language" class="ui-language" data-i18n-aria="ui_language" aria-label="Interface language"></select>
+      </div>
     </header>
-    <content>
+    <div class="content">
+      <div class="tabs" role="tablist">
+        <button type="button" class="tab" role="tab" id="tab-convert" aria-controls="panel-convert" data-tab="convert" data-i18n="tab_convert">Convert</button>
+        <button type="button" class="tab" role="tab" id="tab-downloads" aria-controls="panel-downloads" data-tab="downloads" data-i18n="tab_download">Downloads</button>
+      </div>
+      <div class="panel" id="panel-convert" role="tabpanel" aria-labelledby="tab-convert">
       <div class="info">
-        <span>Previous translations <span class="lime">are not supported</span> in the latest version of the game.
-          Please download the newest translations from <a class="lightgreen" href="https://crowdin.com/project/dyson-sphere-program" target="blank">Crowdin</a>.</span>
+        <span data-i18n-html="unsupported">Previous translations <span class="lime">are not supported</span> in the latest version of the game.
+          Please download the newest translations from <a class="lightgreen" href="https://crowdin.com/project/dyson-sphere-program" target="_blank" rel="noopener">Crowdin</a>.</span>
       </div>
       <div class="info">
-        <span>This tool will convert the json file downloaded from <a class="lightgreen"
-            href="https://crowdin.com/project/dyson-sphere-program" target="blank">Crowdin</a>
-           into the game files needed to run the game with a custom translation.</span>
+        <span data-i18n-html="intro">This tool will convert the json file downloaded from <a class="lightgreen"
+            href="https://crowdin.com/project/dyson-sphere-program" target="_blank" rel="noopener">Crowdin</a>
+          into the game files needed to run the game with a custom translation.</span>
       </div>
       <div class="info upload">
-        <label for="FileInput">Select the translation file (DysonSphereProgram_The_Dark_Fog.json) downloaded from Crowdin</label>
-        <input name="file-upload" type="file" id="FileInput" accept=".json" onclick="clearErrors()">
+        <label for="FileInput" data-i18n="select_file">Select the translation file (DysonSphereProgram_The_Dark_Fog.json) downloaded from Crowdin</label>
+        <div class="file-picker">
+          <button type="button" class="dsp-button" id="file-button" data-i18n="choose_file">Choose file</button>
+          <span id="file-name">No file chosen</span>
+        </div>
+        <input name="file-upload" type="file" id="FileInput" accept=".json" hidden>
+        <div class="dropzone" id="dropzone" data-i18n="drop_hint">Drop the translation file here</div>
       </div>
-      <div class="info">Choose your language, download the translation and unzip it in \steamapps\common\Dyson Sphere
-        Program\Locale</div>
+      <div class="info" data-i18n="install">Choose your language, download the translation and unzip it in \steamapps\common\Dyson Sphere
+        Program</div>
       <section>
-        <select id="locale-selection" onchange="updateLocale(this)" onclick="clearErrors()"></select>
-        <button class="dsp-button" onclick="downloadTranslation()">Download</button>
+        <select id="locale-selection" data-i18n-aria="translation_language" aria-label="Translation language"></select>
+        <button type="button" class="dsp-button" id="download-button" data-i18n="download" hidden>Download</button>
       </section>
-      <div class="error">
-        <span id="ErrorDisplay"></span>
+      <div class="status" id="status" role="status" aria-live="polite"></div>
+      <div class="results" id="results" hidden>
+        <div class="error" id="error-box" hidden>
+          <span id="ErrorDisplay" role="alert"></span>
+        </div>
+        <div id="error-strings"></div>
       </div>
-      <div id="error-strings"></div>
-    </content>
+      </div>
+      <div class="panel" id="panel-downloads" role="tabpanel" aria-labelledby="tab-downloads" hidden>
+        <div class="info" data-i18n="dl_intro">Ready-made translations. Download one and unzip it in \steamapps\common\Dyson Sphere Program</div>
+        <div class="table-wrap">
+          <table class="downloads">
+            <thead>
+              <tr>
+                <th data-i18n="col_file">File</th>
+                <th data-i18n="col_language">Language</th>
+                <th class="num" data-i18n="col_size">Size</th>
+                <th data-i18n="col_date">Date</th>
+                <th class="num" data-i18n="col_downloads">Downloads</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="downloads-body"></tbody>
+          </table>
+        </div>
+        <div class="status" id="downloads-status" role="status" aria-live="polite"></div>
+      </div>
+    </div>
     <footer>
       <div class="info hidden" id="bg-credit-block">
-        <span class="text">Background image:</span>
+        <span class="text" data-i18n="bg_credit">Background image:</span>
         <span id="bgcredit"></span>
       </div>
-      <div class="info">
-        <button class="dsp-button dark" onclick="changeBackgroundImage()">Change background</button>
+      <div class="info bg-controls">
+        <button type="button" class="dsp-button dark" id="bg-button" data-i18n="change_bg">Change background</button>
+        <label class="auto-bg"><input type="checkbox" id="auto-bg"> <span data-i18n="auto_bg">Auto change</span></label>
       </div>
+      <div class="bg-timer" id="bg-timer" hidden><div id="bg-timer-bar"></div></div>
       <div class="info">
-        <span class="text">Source code:</span>
-        <a href="https://github.com/DSPCD/translation-converter" target="_blank">
-          <button class="github">
-            <svg height="32" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="32" data-view-component="true"
-              class="octicon octicon-mark-github v-align-middle color-fg-default">
+        <span class="text" data-i18n="source_code">Source code:</span>
+        <a href="https://github.com/DSPCD/translation-converter" target="_blank" rel="noopener">
+          <span class="github">
+            <svg height="32" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="32">
               <path
                 d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z">
               </path>
             </svg>
             <span class="repository-name">DSP Translation Converter</span>
-          </button>
+          </span>
         </a>
       </div>
-      <div class="info small">Created by RogerHN</div>
+      <div class="info small" data-i18n="created_by">Created by RogerHN</div>
     </footer>
-    
   </main>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
-  <script src="./js/jszip.min.js"></script>
-  <script src="./js/FileSaver.min.js"></script>
-  <script src="./js/script.js"></script>
+  <div class="consent" id="consent" hidden>
+    <span data-i18n="consent_text">This site uses Google Analytics to count visits. Allow it?</span>
+    <button type="button" class="dsp-button" id="consent-accept" data-i18n="consent_allow">Allow</button>
+    <button type="button" class="dsp-button dark" id="consent-decline" data-i18n="consent_decline">Decline</button>
+  </div>
+
+  <script src="./src/vendor/jszip.min.js"></script>
+  <script src="./src/vendor/FileSaver.min.js"></script>
+  <script src="./src/js/i18n.js"></script>
+  <script src="./src/js/script.js"></script>
+  <script src="./src/js/downloads.js"></script>
 </body>
 
 </html>

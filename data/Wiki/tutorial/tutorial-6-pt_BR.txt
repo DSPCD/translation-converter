@@ -1,0 +1,24 @@
+﻿{$Text|fontsize=16;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,30}
+Energia do núcleo de Ícarus
+{$Text|fontsize=14;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,20}
+O mecha consome energia do núcleo ao se mover, coletar, construir, combinar itens e pesquisar tecnologias usando seus próprios laboratórios. As barras e estatísticas de energia do núcleo são exibidas no canto inferior direito da tela.
+
+A energia insuficiente do núcleo limitará as atividades do mecha, tornando o movimento mais lento ou prejudicando as pesquisas. Por isso, é importante monitorar e gerenciar o uso da energia do núcleo do mecha. Quando a energia do núcleo estiver insuficiente, você pode clicar no botão <color="#FD965ECC">"Painel do Mecha ($LKEY_36;)"</color> no canto inferior direito da tela para abrir o <color="#FD965ECC">"Painel de Informações do Mecha"</color> e reabastecer a câmara de combustível.
+
+A energia do núcleo do mecha é recuperada principalmente ao converter a energia do combustível em energia do núcleo por meio da câmara de combustível. Quanto maior a potência da câmara de combustível, mais rápido a energia do núcleo é recuperada.
+{$Video|clip=Videos/tutorial-6-ld;size=420,180}
+{$Text|fontsize=14;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,20}
+No início, você pode obter dois combustíveis básicos, <color="#FD965ECC">madeira</color> e <color="#FD965ECC">combustíveis vegetais</color>, coletando de árvores e plantas do planeta. O <color="#FD965ECC">carvão</color> também é uma fonte confiável de combustível.
+Combustíveis avançados contêm mais energia do que os básicos. Eles também aumentam a potência da câmara de combustível do mecha, para que sua energia seja recuperada mais rápido.
+
+Além da câmara de combustível, o núcleo do mecha possui uma fraca capacidade de fornecimento de eletricidade.
+
+Veja os detalhes do uso de energia movendo o cursor do mouse sobre as estatísticas à direita da barra de energia do núcleo.
+
+Além da câmara de combustível, o Painel do Mecha tem mais funcionalidades. Você pode ver à direita do painel os dados em tempo real dos diversos parâmetros do mecha. Também pode ativar/desativar os <color="#FD965ECC">drones de construção</color> para controlar com flexibilidade seus planos de construção.
+
+<color="#FD965ECC">Mesmo com os drones de construção desativados, você ainda pode construir manualmente mantendo pressionado o holograma branco no solo com o botão esquerdo do mouse.</color>
+
+Após desbloquear o <color="#FD965ECC">Sistema de Armas</color>, você pode carregar vários tipos de munição no Carregador e usá-las para atirar nos inimigos.
+
+Após desbloquear o <color="#FD965ECC">Protótipo</color>, você pode implantar <color="#FD965ECC">drones de combate</color> no Hangar. Depois que a frota for configurada, esses drones de combate o ajudarão a atacar os inimigos.

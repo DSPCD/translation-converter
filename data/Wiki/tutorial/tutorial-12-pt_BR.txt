@@ -1,0 +1,17 @@
+﻿{$Text|fontsize=16;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,30}
+Guia do Modo de Navegação Espacial
+{$Text|fontsize=14;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,20}
+No Modo de Cruzeiro:
+
+O mouse fica travado por padrão. Destrave-o pressionando a tecla <color="#FD965ECC">[$LKEY_23;]</color>.
+Alinhe a direção de cruzeiro do mecha com a orientação da câmera mantendo pressionada a tecla [$LKEY_1;].
+Acelere ou desacelere o mecha <color="#FD965ECC">mantendo pressionada a tecla [$LKEY_22;] ou [$LKEY_2;], respectivamente.</color>
+Faça o mecha voar de lado para a esquerda ou para a direita pressionando [$LKEY_16;] ou [$LKEY_19;]. Mantenha [$LKEY_49;] pressionado e arraste para girar a câmera lateralmente.
+
+No Modo de Cruzeiro, controle o mecha até diferentes planetas ou sistemas planetários seguindo as setas da Navegação espacial.
+{$Video|clip=Videos/tutorial-12-ld;size=420,180}
+{$Text|fontsize=14;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,20}
+Após desbloquear o "Propulsor 4", o mecha pode usar a dobra espacial. Isso permite viagens intergalácticas rápidas.
+Para realizar um voo com dobra, é necessário ter energia suficiente e "Dobras Espaciais".
+
+A Dobra Espacial é um consumível necessário para o voo com dobra do mecha. Quando seu mecha escapa do campo gravitacional de um planeta, ative ou desative o voo com dobra pressionando <color="#FD965ECC">[$LKEY_24;]</color>. A ativação do voo com dobra consome não só uma grande quantidade de energia, mas também 1x <color="#FD965ECC">Dobra Espacial</color>.

@@ -1,0 +1,13 @@
+﻿{$Text|fontsize=16;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,30}
+Conveyor Belt and Sorter
+{$Text|fontsize=14;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,20}
+<color="#FD965ECC">With the Conveyor Belt and Sorter, you can achieve automation.</color>
+
+Production facilities have varying ports. A Mining Machine, for example, can be connected to a Conveyor Belt directly. Some, like an Arc Smelter, needs a Sorter to connect the cargo supply and receipt facilities. One way to transport ores from a Mining Machine to a Smelter is by using Conveyor Belt and Sorter. The ores are taken out of the Mining Machine via the Conveyor Belt. Then, the Conveyor Belt is connected to the Arc Smelter using the Sorter, which will automatically transport the ores to the Arc Smelter for smelting.
+{$Video|clip=Videos/tutorial-9-ld;size=420,180}
+{$Text|fontsize=14;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,20}
+To plan the route of the Conveyor Belt, you must determine a starting point and an endpoint.
+
+When planning the Conveyor Belt, <color="#FD965ECC">you can increase the target height one level by pressing [$LKEY_63;] and lower it by one level by pressing [$LKEY_64;]. If you need to reset the target height to ground level, press [$LKEY_65;].</color>
+
+The Conveyor Belt usually automatically snaps to connectable buildings. <color="#FD965ECC">Hold [$LKEY_62;] to unsnap.</color>

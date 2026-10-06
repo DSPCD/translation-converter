@@ -1,0 +1,27 @@
+﻿{$Text|fontsize=16;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,30}
+Ray Receiver Work Mechanism
+{$Text|fontsize=14;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,20}
+The Ray Receiver can receive high-energy rays that are transmitted back from the Dyson Sphere (Dyson Swarm). It features two modes: <color="#FD965ECC">"Power Generation"</color> and <color="#FD965ECC">"Photon Generation"</color>.
+
+In the Power Generation mode, the Ray Receiver directly outputs the energy it has received to the Power Grid.
+<color="#FD965ECC">The Photon Generation mode is unlocked only after upgrading the "Dirac Inversion Mechanism" technology. </color>When in Photon Generation Mode, the Ray Receiver will convert the received energy directly into "Critical Photons" as its receiving power increases by eight times.
+
+Critical Photons can be easily converted into Antimatter and hydrogen using the Small Particle Collider, enabling energy to be stored in the form of Antimatter.
+{$Text|fontsize=14;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,20}
+
+High-energy rays will lose energy during transmission. So, the transmission efficiency is lower at first during energy transmission from the Dyson Sphere to the Ray Receiver. The efficiency can be increased by upgrading technologies or continuing the Ray Receiver's operation.
+
+The primary receiving power of each Ray Receiver is 6MW, but this can be increased by continuing operation of the Ray Receiver or consuming Gravitational Lens. When a Ray Receiver is located on the nightside of the planet and fails to receive rays, the progress of continuous ray reception will significantly slow down.
+
+When the continuous ray reception progress reaches 100%, the receiving power is increased by 2.5 times, and the energy loss is reduced by 40% compared to the current level.
+<color="#FD965ECC">Inserting a Graviton Lens greatly increases receiving power (different lenses increase it by different amounts); if the Graviton Lens has Proliferator Points, receiving power is further increased. </color>The Planetary Ionosphere Utilization technology gives a Ray Receiver more time for high-energy radiation in a day and night cycle by extending the effective altitude for receiving rays to the outer boundary of the exosphere and increasing their operation times.
+
+Considering all the bonus factors above:
+<color="#FD965ECC">Theoretically, the max power in the Power Generation mode is 120MW.</color>
+<color="#FD965ECC">Theoretically, the max power in the Photon Generation mode is 960MW.</color>
+
+The Ray Receiver will request energy from the Dyson Sphere after its real-time receiving power is determined based on the above principles.
+Due to the receiving efficiency, the requested power (actual power drawn from the Dyson Sphere) = the current power of the Ray Receiver/current receiving efficiency
+When the Dyson Sphere's total power generation performance can’t meet the power requests of all Ray Receivers, the Dyson Sphere will allocate power to each Ray Receiver based on the weighted requested power.
+
+The Ray Receiver will request the max amount of energy it can currently attain from the Dyson Sphere, regardless of the current load of the Power Grid.

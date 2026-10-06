@@ -1,0 +1,30 @@
+﻿{$Text|fontsize=16;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,30}
+Pulverizador e Proliferador
+{$Text|fontsize=14;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,20}
+Pulverizadores e Proliferadores podem aumentar significativamente a produção da linha de produção. Você pode instalar o Pulverizador na Esteira Transportadora com carga (ou conectar uma Esteira Transportadora de entrada ao Pulverizador) e <color="#FD965EB0">alimentar o Proliferador no Pulverizador pela porta superior</color>. Assim, o Pulverizador pulverizará automaticamente o Proliferador sobre a carga que passar por ele.
+
+Depois de pulverizados com o Proliferador, os itens ganham <color="#FD965EB0">"Pontos de Proliferador", que determinam os efeitos do Proliferador.</color>
+Pontos de Proliferador diferentes aplicam efeitos de "produtos extras" ou "aceleração da produção" diferentes.
+{$Video|clip=Videos/tutorial-14-ld;size=420,180}
+{$Text|fontsize=14;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,20;tablecolwidths=0.2,0.2,0.2,0.2,0.2;tablerowheights=30,30,30,30,30,30;tablehorzalignments=0,0,0,0,0;tablevertalignments=1,1,1,1,1;tablelinecolor=#00000000}
+Tipo de Proliferador	Pontos de Proliferador	Aceleração da Produção	Produtos Extras	Consumo Extra de Energia
+Mk.I	1	25.00%	12.50%	30%
+Mk.II	2	50.00%	20.00%	70%
+─	3	75.00%	22.50%	110%
+Mk.III	4	100.00%	25.00%	150%
+{$Text|fontsize=14;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,20}
+Nem todos os itens ganham o efeito de "produtos extras" depois de pulverizados com o Proliferador. Alguns itens ganham outros efeitos. Por exemplo,
+
+<color="#FD965EB0">Se este item for usado no Modo Pesquisa de um Laboratório de Matrizes, ele produzirá Hashes extras depois de pulverizado com o Proliferador.
+Se este item for usado no Receptor de Raios, ele aumentará a produção máxima do Receptor de Raios depois de pulverizado.
+Se este item for uma Cápsula de combustível de Antimatéria, ele aumentará a geração de energia das instalações depois de pulverizado.
+Se este item for um combustível comum, ele aumentará o poder calorífico depois de pulverizado com o Proliferador.</color>
+
+Você pode passar o cursor sobre o item para conferir os detalhes do efeito do Proliferador.
+
+Se quiser obter os efeitos de "produtos extras" ou "aceleração da produção" durante a produção, pulverize cada matéria-prima desse produto com o Proliferador para que cada uma delas receba Pontos de Proliferador.
+
+Se alguma matéria-prima não receber Pontos de Proliferador durante a produção, toda a produção não entregará produtos extras nem será acelerada.
+Para obter produtos extras de um processo de produção, certifique-se de que cada matéria-prima receba Pontos de Proliferador. Depois, selecione o efeito de "produtos extras" na instalação de produção correspondente.
+
+Quando itens pulverizados com o Proliferador são usados como matéria-prima para produzir produtos de nível superior, a potência da instalação de produção aumenta substancialmente, resultando em consumo extra de energia.

@@ -1,0 +1,24 @@
+﻿{$Text|fontsize=16;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,30}
+Mecha Core Energy
+{$Text|fontsize=14;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,20}
+Mecha will consume core energy when they move, collect, build, and combine items and research technologies using their own labs. The core energy bars and stats are displayed at the bottom right of the screen.
+
+Insufficient core energy will limit the activities of the mecha, causing slower movement or hampering research. So, it is important to monitor and manage the mecha's core energy usage. When its core energy is insufficient, you can click the <color="#FD965ECC">"Mecha Panel ($LKEY_36;)"</color> button on the lower right corner of the screen to open the <color="#FD965ECC">"Mecha Info Panel"</color> and replenish the fuel chamber.
+
+The mecha's core energy is recovered mainly by converting fuel energy into core energy via the fuel chamber. The greater the fuel chamber's power, the faster the core energy is recovered.
+{$Video|clip=Videos/tutorial-6-ld;size=420,180}
+{$Text|fontsize=14;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,20}
+In the early stage, you can gain two basic fuels--<color="#FD965ECC">wood</color> and <color="#FD965ECC">plant fuels</color>--by collecting from trees and plants on the planet. <color="#FD965ECC">Coal</color> is also a reliable source of fuel.
+Advanced fuels contain more energy than basic fuels. It also boosts the power of the mecha’s fuel chamber so that its energy can be recovered quicker.
+
+Except for the fuel chamber, the mecha core comes with weak electricity-supply power.
+
+Check energy usage details by moving the mouse cursor to the stats on the right of the core energy bar.
+
+Apart from the fuel chamber, Mecha Panel has more functionalities. You can view real-time data of the mecha's various parameters on the right side of the panel. You can also enable/disable the <color="#FD965ECC">construction drones</color> to flexibly control your construction plans.
+
+<color="#FD965ECC">Even if the construction drones are disabled, you can still manually build by long-pressing the white hologram on the ground using the left mouse button.</color>
+
+After unlocking the <color="#FD965ECC">Weapon System</color>, you can load various types of ammo into the Magazine and use them to shoot enemies.
+
+After unlocking the <color="#FD965ECC">Prototype</color>, you can deploy <color="#FD965ECC">combat drones</color> into the Hangar. Once the fleet is configured, these combat drones will assist you in attacking enemies.

@@ -1,0 +1,14 @@
+﻿{$Text|fontsize=16;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,30}
+Build Mining Machines and Cover Veins
+{$Text|fontsize=14;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,20}
+The Mining Machine can automatically collect ores. Press the <color="#FD965ECC">[$LKEY_55;]</color> key to rotate the Mining Machine <color="#FD965ECC">90°</color> so that its sector area can cover the veins.
+While building, press and hold <color="#FD965ECC">[$LKEY_61;]</color> to unsnap from the building grid. This allows for better adjustment of the Mining Machine's position and rotation to cover more veins.
+{$Video|clip=Videos/tutorial-4-ld;size=420,180}
+{$Text|fontsize=14;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,20}
+The more veins the Mining Machine covers, the faster it mines. Each covered vein provides <color="#FD965ECC">30/min</color> basic output. The mining operation causes resource loss in the covered veins one by one, so loss rate in each vein is the same. When one of the covered veins is depleted, the Mining Machine's output will drop.
+
+Covering more veins does not necessarily result in higher output. The number of veins to cover depends on the balance between output and resource loss.
+
+A vein can be covered by multiple Mining Machines, which results in a faster loss rate.
+
+To improve the mining speed of the Mining Machine and reduce the loss of the vein from the mining operations, you can continuously upgrade the <color="#FD965ECC">"Resource Utilization"</color> level in the <color="#FD965ECC">"Upgrade"</color> tab of the <color="#FD965ECC">"Technology Tree ($LKEY_39;)"</color>.

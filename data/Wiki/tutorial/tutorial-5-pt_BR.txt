@@ -1,0 +1,20 @@
+﻿{$Text|fontsize=16;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,30}
+Guia de criação da Rede Elétrica
+{$Text|fontsize=14;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,20}
+Para ativar uma instalação de produção, conecte-a à Rede Elétrica. Isso também exige instalações de geração de energia para fornecer eletricidade.
+
+As instalações da Rede Elétrica incluem as <color="#FD965ECC">"instalações de geração de energia"</color>, as <color="#FD965ECC">"instalações de consumo de energia"</color>, as <color="#FD965ECC">"instalações de armazenamento de energia"</color> e as <color="#FD965ECC">"instalações de transmissão de energia"</color>.
+
+Se a geração de energia da Rede Elétrica for maior que o consumo, as instalações consumidoras funcionarão na capacidade máxima. O excedente de energia elétrica será armazenado nas instalações de armazenamento em um nível de potência específico.
+Se o consumo de energia da Rede Elétrica exceder a geração, as instalações de armazenamento descarregarão eletricidade com uma certa potência para suprir a diferença. Se a diferença ainda não puder ser suprida mesmo depois de todos os Acumuladores descarregarem na potência máxima, a eficiência de funcionamento das instalações consumidoras será reduzida devido à energia insuficiente.
+<color="#FD965ECC">Quando a suficiência da Rede Elétrica for inferior a 10%, a Rede Elétrica cairá e as instalações de produção pararão de funcionar.</color>
+{$Video|clip=Videos/tutorial-5-ld;size=420,180}
+{$Text|fontsize=14;linespacing=1.1;textalignment=0,1;color=#FFFFFF52;material=UI/Materials/widget-text-alpha-5x-thick;margins=20,20,20,20}
+As Turbinas Eólicas podem ser usadas para gerar energia no início do jogo. Elas convertem a energia do vento em energia elétrica, o que as torna uma opção viável nos estágios iniciais, pois não consomem nenhum combustível. Além disso, o aproveitamento da energia eólica varia de acordo com o planeta.
+
+Uma Turbina Eólica tem uma cobertura fixa de fornecimento de energia, que é muito pequena. Se quiser ampliar essa cobertura, <color="#FD965ECC">use a Torre de Tesla para transmitir e fornecer energia. </color>Diferentes instalações de transmissão de energia têm comprimentos de conexão e coberturas de fornecimento diferentes. Aprimorar tecnologias desbloqueará instalações de transmissão mais avançadas.
+
+As instalações de geração de energia a combustível consomem combustível de acordo com a potência realmente consumida.
+
+Clicar na Torre de Tesla permite acessar os dados de energia da Rede Elétrica atual e fazer ajustes conforme a demanda de consumo.
+Você pode exibir sua Rede Elétrica a qualquer momento ativando <color="#FD965ECC">"Rede Elétrica"</color> em <color="#FD965ECC">"Exibição de detalhes ($LKEY_40;)"</color>.
