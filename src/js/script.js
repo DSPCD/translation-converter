@@ -1,6 +1,6 @@
-const VERSION = "0.10.35.29104";
+const VERSION = "0.10.35.29151";
 
-const LASTUPDATE = "06/10/2026"; // dd/mm/yyyy
+const LASTUPDATE = "17/10/2026"; // dd/mm/yyyy
 
 const GA_ID = "G-TDNLFWC28N";
 
