@@ -1,6 +1,6 @@
 const VERSION = "0.10.35.29151";
 
-const LASTUPDATE = "17/10/2026"; // dd/mm/yyyy
+const LASTUPDATE = "19/10/2026"; // dd/mm/yyyy
 
 const GA_ID = "G-TDNLFWC28N";
 
@@ -568,8 +568,7 @@ function createFilesFromJson(data, source) {
   const files = new Map();
   const problems = [];
   const warnings = [];
-  let filename = null;
-  let fileContent = "";
+  const contents = new Map();
 
   // placeholders and tags of one string against the source: errors go to problems, tag differences to warnings
   const validate = (key, value) => {
@@ -614,21 +613,16 @@ function createFilesFromJson(data, source) {
     const questionMark = props.length === 4 ? props[2] : "";
     const num = props[props.length - 1];
 
-    if (filename !== null && file !== filename) {
-      files.set(filename, utf16le(fileContent));
-      fileContent = "";
-    }
-    filename = file;
-
     validate(key, value);
 
     let text = value;
     if (TRANSLATION_FIX[key]) text = TRANSLATION_FIX[key];
     else if (key === RESTART_KEY) text = `${value} v.${VERSION}`;
-    fileContent += `${original}\t${questionMark}\t${num}\t${text}\r\n`;
+    // keys of one file may be non-contiguous (Crowdin appends new strings at the end), so group by file name
+    contents.set(file, (contents.get(file) || "") + `${original}\t${questionMark}\t${num}\t${text}\r\n`);
   });
 
-  if (filename !== null) files.set(filename, utf16le(fileContent));
+  contents.forEach((content, name) => files.set(name, utf16le(content)));
   return { files, problems, warnings };
 }
 
